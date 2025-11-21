@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Nóku Travel — Authentic & Wellness-Focused La Fortuna Tours, Costa Rica</title>
+  <meta name="description" content="Discover La Fortuna, Costa Rica, with Nóku Travel. Authentic, wellness-focused tours, personalized by a local host. Your Pura Vida escape awaits!" />
+  <meta name="keywords" content="La Fortuna tours, Arenal, Costa Rica, wellness travel, hot springs, yoga, birdwatching, ecotourism, local guide, authentic experiences, Pura Vida" />
+  <link rel="canonical" href="index.html" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Nóku Travel — Authentic & Wellness-Focused La Fortuna Tours" />
+  <meta property="og:description" content="Live the authentic, wellness-first La Fortuna experience with a local host." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="index.html" />
+  <meta property="og:image" content="assets/img/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nokú Travel" />
+  <meta name="twitter:description" content="Your personalized, wellness-minded adventure in La Fortuna, Costa Rica." />
+  <meta name="twitter:image" content="assets/img/twitter-image.jpg" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+
+
+<!-- NAV (header fijo con hamburguesa) -->
+<nav class="nav" id="header" role="navigation" aria-label="Main menu">
+  <div class="container nav__inner">
+    <!-- Brand -->
+    <a href="index.html#home" class="brand" aria-label="Nóku Travel — Home">
+      <img src="assets/img/noku-logo.png" alt="Nokú Travel logo" class="brand__logo">
+      <span class="brand__name">Nokú Travel</span>
+    </a>
+
+    <!-- Botón hamburguesa (solo móvil) -->
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-expanded="false"
+      aria-controls="navMobile"
+      aria-label="Open main menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Links desktop -->
+    <div class="nav__links" role="menubar">
+      <a href="index.html#home" class="nav__link" role="menuitem">Home</a>
+      <a href="tours.html" class="nav__link" role="menuitem">All Tours</a>
+      <a href="about.html" class="nav__link" role="menuitem">About</a>
+      <a href="contact.html" class="nav__link" role="menuitem">Contact</a>
+      <a
+        href="https://wa.me/50685675060"
+        target="_blank"
+        rel="noopener"
+        class="nav__link btn-whatsapp-mobile"
+        aria-label="Contact us via WhatsApp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Menú móvil tipo overlay (como Natura) -->
+<nav class="nav-mobile" id="navMobile" aria-label="Mobile menu" aria-hidden="true" hidden>
+  <div class="mobile-logo">
+    <img
+      src="assets/img/noku-logo.png"
+      alt="Nokú Travel logo"
+      width="120"
+      height="40"
+      loading="lazy">
+  </div>
+
+  <ul>
+    <li><a href="index.html#home" data-close>Home</a></li>
+    <li><a href="tours.html" data-close>All Tours</a></li>
+    <li><a href="about.html" data-close>About</a></li>
+    <li><a href="contact.html" data-close>Contact</a></li>
+  </ul>
+</nav>
+
+
+
+
+  <main id="main-content">
+    <!-- HERO -->
+<section id="home" class="hero fade-section" aria-label="Hero — Nóku Travel">
+
+      <div class="hero__media" aria-hidden="true">
+        <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg">
+          <source src="assets/video/hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__scrim" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__content">
+        <h1 class="hero__title">
+          Discover La Fortuna with <span class="txt-accent">Local Insight</span>
+        </h1>
+        <p class="hero__lead">
+          Experience authentic, wellness minded adventures with personalized outings crafted by locals.
+        </p>
+        <!-- (Sin botones en el hero) -->
+      </div>
+    </section>
+
+    <!-- WHY US -->
+<section class="section section--light fade-section" id="about" aria-labelledby="why-title">
+
+      <div class="container">
+        <div class="section__header">
+          <h2 class="h2" id="why-title">Why Choose Nóku Travel?</h2>
+          <p class="lead">
+            Born from the heart of La Fortuna, we share the spirit of our land through moments that linger. Intimate, genuine and connected to nature.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <div class="card__pad">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                class="icon lucide lucide-map">
+                <path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/>
+                <path d="M15 5.764v15"/><path d="M9 3.236v15"/>
+              </svg>
+              <h3 class="card__title">Local Knowledge</h3>
+              <p class="card__text">Years exploring every path, waterfall and corners of La Fortuna — we take you beyond the ordinary.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__pad">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                class="icon lucide lucide-user-cog">
+                <path d="M10 15H6a4 4 0 0 0-4 4v2"/><path d="m14.305 16.53.923-.382"/>
+                <path d="m15.228 13.852-.923-.383"/><path d="m16.852 12.228-.383-.923"/>
+                <path d="m16.852 17.772-.383.924"/><path d="m19.148 12.228.383-.923"/>
+                <path d="m19.53 18.696-.382-.924"/><path d="m20.772 13.852.924-.383"/>
+                <path d="m20.772 16.148.924.383"/><circle cx="18" cy="15" r="3"/><circle cx="9" cy="7" r="4"/>
+              </svg>
+              <h3 class="card__title">Personalized Service</h3>
+              <p class="card__text">Small groups, tailored timing and experiences built around your rhythm and curiosity.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__pad">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                class="icon lucide lucide-sprout">
+                <path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"/>
+                <path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"/><path d="M5 21h14"/>
+              </svg>
+              <h3 class="card__title">Sustainable Travel</h3>
+              <p class="card__text">We support local businesses and protect the natural beauty that makes La Fortuna special.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+        <!-- TOURS PREVIEW -->
+    <section id="tours" class="section section--light fade-section" aria-labelledby="tours-title">
+
+          <div class="container">
+            <div class="section__header">
+              <h2 class="h2" id="tours-title">Our Signature Tours</h2>
+              <p class="lead">Handcrafted journeys that reveal the true essence of La Fortuna</p>
+            </div>
+            <div id="tours-container" class="grid grid--3"></div>
+            <!-- (Los botones de “más detalles” se generan en tus tarjetas de tours vía JS) -->
+          </div>
+        </section>
+
+            <!-- WELLNESS WITH NÓKU -->
+<section class="wellness-section">
+    <div class="wellness-bg">
+        <div class="wellness-bg__overlay"></div>
+    </div>
+
+    <div class="wellness-inner container">
+        <h2 class="wellness-title">Wellness with Nóku</h2>
+        <p class="wellness-subtitle">
+            Costa Rica is more than a destination — with Nóku, it becomes a mindful experience that helps you slow down, breathe, and reconnect.
+        </p>
+
+        <div class="wellness-grid">
+            <article class="wellness-item">
+                <div class="wellness-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <h3 class="wellness-item__title">Natural Rhythm</h3>
+                <p class="wellness-item__text">
+                    Wake up to birdsong, warm rain and volcano views. With Nóku you move at nature’s pace, not the clock’s.
+                </p>
+            </article>
+
+            <article class="wellness-item">
+                <div class="wellness-icon">
+                    <i class="fa-solid fa-spa"></i>
+                </div>
+                <h3 class="wellness-item__title">Inner Reset</h3>
+                <p class="wellness-item__text">
+                    Forests, hot springs and quiet moments woven into your journey to ease the mind and release tension.
+                </p>
+            </article>
+
+            <article class="wellness-item">
+                <div class="wellness-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <h3 class="wellness-item__title">Conscious Travel</h3>
+                <p class="wellness-item__text">
+                    Hosted by locals who cares. We choose sustainable practices, support local projects and create experiences that leave a positive impact.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+    <!-- ABOUT LA FORTUNA -->
+<section id="lafortuna" class="section fade-section" aria-labelledby="lafortuna-title">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="h2" id="lafortuna-title">La Fortuna: The Heart of Costa Rica’s Natural Beauty</h2>
+      <p class="lead">
+        Home of the majestic Arenal Volcano, La Fortuna is a place where nature, adventure, and wellness come together in perfect harmony.
+      </p>
+    </div>
+
+    <div class="custom__grid">
+      <div class="custom__col">
+        <p class="text">
+          Surrounded by lush rainforest, hot springs, waterfalls, and wildlife, La Fortuna invites you to slow down and connect with the natural world. 
+          Whether you’re exploring scenic trails, soaking in thermal waters, or enjoying a peaceful sunrise, every moment here feels alive.
+        </p>
+
+        <p class="text">
+          For us at Nóku Travel, La Fortuna is more than a destination, it is home.  
+          We take pride in sharing the hidden gems, local culture, and authentic experiences that make this region unforgettable.
+        </p>
+
+        <ul class="list">
+          <li>Views of the iconic Arenal Volcano</li>
+          <li>Natural hot springs and healing waters</li>
+          <li>Waterfalls, rainforest trails & wildlife encounters</li>
+          <li>A warm local community rooted in nature and tradition</li>
+        </ul>
+      </div>
+
+      <div class="custom__col">
+        <div class="card card--elevated">
+          <div class="card__media">
+            <img src="assets/img/lafortuna.jpeg" alt="Arenal Volcano overlooking La Fortuna" class="img-cover">
+          </div>
+          <div class="card__pad">
+            <h3 class="card__title">Arenal Volcano</h3>
+            <p class="card__text">The iconic landmark that shapes our landscapes, adventures, and stories.</p>
+            <div class="meta"><span>Location: La Fortuna, Costa Rica</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- CUSTOM ADVENTURE -->
+<section id="custom-adventure" class="section fade-section" aria-labelledby="custom-title">
+
+      <div class="container">
+        <div class="custom__grid">
+          <div class="custom__col">
+            <h2 class="h2" id="custom-title">Custom Adventure Package</h2>
+            <p class="text">
+              Design your perfect La Fortuna experience. Combine multiple activities, follow the rhythm of the weather, and create something uniquely yours.
+            </p>
+            <ul class="list">
+              <li>Fully customizable itineraries</li>
+              <li>Multiple experience combinations</li>
+              <li>Flexible schedules guided by season</li>
+              <li>Attentive guidance from your local host</li>
+            </ul>
+            <!-- (Sin botón en esta sección) -->
+          </div>
+
+          <div class="custom__col">
+            <div class="card card--elevated">
+              <div class="card__media">
+                <img src="assets/img/custom-package.jpg" alt="Arenal Volcano hiking — part of the Custom Adventure Package" class="img-cover" />
+              </div>
+              <div class="card__pad">
+                <h3 class="card__title">Tailored Experiences</h3>
+                <p class="card__text">Whether you seek thrill, tranquility, or both — we’ll find your perfect balance.</p>
+                <div class="meta"><span>Duration: Flexible</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- TRANSFERS SECTION -->
+    <section id="transfers" class="section section--light fade-section" aria-labelledby="transfers-title">
+
+      <div class="container center">
+        <div class="section__header">
+          <h2 class="h2" id="transfers-title">Private Transfers & Local Shuttles</h2>
+          <p class="lead">
+            Travel comfortably across Costa Rica with Nokú.  
+            Private transfers and shared shuttles, safe, flexible, and coordinated with trusted local drivers.
+          </p>
+        </div>
+
+        <div class="transfers__content">
+          <p>
+            Whether you’re arriving at <strong>San José (SJO)</strong> or <strong>Liberia (LIR)</strong> airport, heading to 
+            <strong>La Fortuna</strong>, or connecting between destinations like Monteverde, Manuel Antonio or Tamarindo,  
+            we’ll arrange everything for you.
+          </p>
+
+          <p>
+            Our team ensures seamless coordination, clean and modern vehicles and friendly drivers.  
+            Sit back, relax, and enjoy the ride surrounded by Costa Rica’s tropical landscapes.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <!-- CTA CONTACT -->
+<section id="contact" class="section bg-brand fade-section" aria-labelledby="cta-title">
+
+      <div class="container center">
+        <h2 class="h2 txt-white" id="cta-title">Ready for Your Adventure?</h2>
+        <p class="lead txt-white">Let’s craft your perfect La Fortuna escape, where each moment feels alive. Pura Vida! 🇨🇷</p>
+        <a href="contact.html" class="btn btn--secondary" aria-label="Go to contact page">
+          Contact Us
+        </a>
+      </div>
+    </section>
+  </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="brand brand--footer">Nóku Travel</div>
+        <p class="muted">
+          Authentic, wellness first adventures born from the heart of La Fortuna, Costa Rica.
+        </p>
+
+        <div class="footer__contact-info">
+          <a href="mailto:nokutravelcr@gmail.com" class="footer__link" aria-label="Send an email">
+            <i class="fas fa-envelope"></i> nokutravelcr@gmail.com
+          </a>
+          <span class="footer__link">
+            <i class="fas fa-map-marker-alt"></i> La Fortuna, San Carlos, Costa Rica
+          </span>
+        </div>
+
+        <div class="socials">
+          <a href="https://www.instagram.com/nokutravelcr" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/50685675060" target="_blank" rel="noopener" aria-label="Contact us via WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+
+        <p class="tiny">© 2025 Nóku Travel. All rights reserved. | Pura Vida 🇨🇷</p>
+      </div>
+    </footer>
+
+    <!-- App JS -->
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/nav.js" defer></script>
+
+    <!-- Solo dejamos este script pequeño del grid de tours -->
+    <script>
+      // Ensure grid fallback on tours preview
+      document.addEventListener('DOMContentLoaded', () => {
+        const c = document.getElementById('tours-container');
+        if (c && getComputedStyle(c).display === 'block') {
+          c.style.display = 'grid';
+          c.style.gap = '1.5rem';
+          if (window.innerWidth >= 901) {
+            c.style.gridTemplateColumns = 'repeat(3, minmax(0, 1fr))';
+          } else {
+            c.style.gridTemplateColumns = 'repeat(auto-fit, minmax(260px, 1fr))';
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

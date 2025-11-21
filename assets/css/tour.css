@@ -1,0 +1,250 @@
+/* =============== TOUR PAGE (detalle) =============== */
+
+/* Layout base */
+.main {
+  padding-top: 64px;
+}
+
+/* 🚀 HERO CON IMAGEN (mismo patrón que About, pero usando solo .page-hero__content) */
+.page-hero {
+  position: relative;
+  min-height: 340px;
+  height: 55vh;
+  max-height: 520px;
+
+  display: flex;
+  align-items: center;
+  /* centramos el .container dentro del hero */
+  justify-content: center;
+
+  color: #fff;
+  overflow: hidden;
+  background: none;
+}
+
+/* Capa de imagen (fondo) */
+.page-hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Capa de Overlay (oscurecimiento) */
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.65)
+  );
+  z-index: 2;
+}
+.page-hero > .container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+/* Contenido (texto) – ocupa el mismo ancho visual que .container */
+.page-hero__content {
+  text-align: left;
+}
+
+.tour-back {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+.tour-back:hover {
+  color: var(--accent-sand);
+}
+
+.tour-title {
+  font-weight: 900;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  margin: 0 0 0.25rem;
+  color: #fff;
+}
+
+.tour-meta {
+  color: rgba(255, 255, 255, 0.95);
+  margin-top: 0.35rem;
+}
+
+/* Bloque de precio dentro del hero */
+.tour-hero__pricebox {
+  margin-top: 1rem;
+}
+
+.tour-price {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--accent-sand);
+  font-weight: 900;
+}
+
+.tour-price__note {
+  color: #e8fff4;
+  font-size: 0.95rem;
+}
+
+/* SUBTÍTULOS */
+.h3 {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--gray-900);
+  margin: 0 0 0.5rem;
+}
+
+.h3--tight {
+  margin-bottom: 0.25rem;
+}
+
+/* GALERÍA */
+.tour-gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  .tour-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .tour-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.tour-photo {
+  height: 200px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-600);
+  font-weight: 700;
+}
+
+.tour-photo.span-2 {
+  grid-column: span 1;
+}
+
+@media (min-width: 700px) {
+  .tour-photo.span-2 {
+    grid-column: span 2;
+  }
+}
+
+.tour-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 2 COLUMNAS */
+.tour-cols {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 980px) {
+  .tour-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* LISTA GRID (What to bring) */
+.list--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+}
+
+@media (max-width: 520px) {
+  .list--grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SCHEDULE */
+.tour-schedule {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.tour-sched-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+/* Evita colisión con la .badge global */
+.tour-schedule .badge {
+  background: #f1efe9;
+  color: var(--noku-primary);
+  font-weight: 800;
+  font-size: 0.78rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.tour-sched-text {
+  color: var(--gray-700);
+  font-size: 0.95rem;
+}
+
+/* CTA */
+.tour-cta {
+  background: #faf8f1;
+  border: 1px solid var(--gray-200);
+  border-radius: 0.9rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tour-cta__actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* RESPONSIVO HERO (igual que About) */
+@media (max-width: 640px) {
+  .page-hero {
+    height: 50vh;
+    min-height: 300px;
+  }
+
+  .page-hero__content {
+    padding: 0 1.25rem; /* mantenemos el mismo padding en móvil */
+  }
+}
+
+@media (max-width: 520px) {
+  .page-hero__content {
+    text-align: left;
+  }
+
+  .page-hero__content .lead {
+    max-width: 42ch;
+  }
+}

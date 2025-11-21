@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Contact — Nóku Travel</title>
+  <meta name="description" content="Get in touch with Nókú Travel to plan your adventure in La Fortuna, Costa Rica." />
+
+  <!-- Same stack as your other pages -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+    /* ===== Page-specific (feel free to move into assets/css/contact.css) ===== */
+    :root{
+      --almera-dark: #7f5539;
+      --almera-medium: #b08968;
+      --almera-light: #e6ccb2;
+      --gray-900:#1a1a1a; --gray-700:#374151; --gray-600:#525252; --gray-300:#d1d5db; --white:#fff;
+      --emerald: #10b981; /* for WhatsApp btn outline */
+    }
+
+    .main { padding-top: 64px; }
+
+    .page-hero{
+      padding: 3rem 0 2rem;
+      color:#fff; text-align:center;
+      background: linear-gradient(135deg, var(--almera-dark), var(--almera-medium));
+    }
+    .page-hero .h2{ color:#fff; margin:0 0 .4rem; }
+    .page-hero .lead{ color:rgba(255,255,255,.95); margin:0 auto; max-width:72ch; }
+
+    .section{ padding: clamp(2rem, 5vw, 3rem) 0; }
+
+    /* Layout like screenshot */
+    .contact-grid{
+      display:grid; gap:1.5rem;
+      grid-template-columns: minmax(0,1fr) 390px;
+      align-items:start;
+    }
+    @media (max-width: 980px){
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+
+    /* Cards */
+    .card{
+      background:#fff; border:1px solid rgba(0,0,0,.06);
+      border-radius:16px; box-shadow:0 8px 20px rgba(0,0,0,.06);
+    }
+    .card__pad{ padding:1.25rem; }
+    @media (min-width:640px){ .card__pad{ padding:1.5rem; } }
+
+    /* Form */
+    .form{ display:grid; gap:1rem; }
+    .grid--2{ display:grid; gap:1rem; grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .span-2{ grid-column: 1 / -1; }
+    @media (max-width:640px){ .grid--2{ grid-template-columns: 1fr; } .span-2{ grid-column:auto; } }
+
+    .label{ display:block; font-weight:600; color:var(--gray-700); margin:0 0 .35rem; }
+    .input, .select, .textarea{
+      width:100%; font:inherit; color:var(--gray-900);
+      background:#fff; border:1px solid var(--gray-300); border-radius:8px;
+      padding:.7rem .85rem; line-height:1.2;
+    }
+    .textarea{ min-height:140px; resize:vertical; }
+    .input:focus, .select:focus, .textarea:focus{
+      outline:none; border-color:var(--almera-medium); box-shadow:0 0 0 3px rgba(176,137,104,.2);
+    }
+
+    .input--split{ display:grid; gap:1rem; grid-template-columns: 1fr 1fr; }
+    @media (max-width:480px){ .input--split{ grid-template-columns:1fr; } }
+
+    .help{ color:var(--gray-600); font-size:.95rem; margin-top:.25rem; }
+
+    /* Buttons */
+    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+      padding:.75rem 1rem; border-radius:10px; border:1px solid transparent; cursor:pointer; text-decoration:none; font-weight:600;
+    }
+    .btn--primary{ background:var(--almera-dark); color:#fff; }
+    .btn--primary:hover{ filter:brightness(.95); }
+    .btn--wa{ background:#fff; color:#065f46; border-color:var(--emerald); }
+    .btn--wa:hover{ background:#f6fffb; }
+
+    /* Sidebar contact card */
+    .contact-list{ list-style:none; padding:0; margin:0; }
+    .contact-list li{ margin:.25rem 0; color:var(--gray-700); }
+    .contact-list a{ color:inherit; text-decoration:underline; text-underline-offset:2px; }
+
+    .hours{ margin:1rem 0; padding:0; list-style:none; color:var(--gray-700); }
+    .hours li{ display:flex; gap:.5rem; justify-content:space-between; border-bottom:1px dashed rgba(0,0,0,.08); padding:.35rem 0; }
+
+    /* Map */
+    .map{ border-radius:12px; overflow:hidden; border:1px solid rgba(0,0,0,.08); }
+    .map iframe{ width:100%; height:280px; border:0; }
+
+    .muted{ color:var(--gray-600); }
+    .h2{ font-size:clamp(1.35rem, 1.2rem + 1vw, 1.8rem); margin:0 0 .5rem; }
+    .lead{ color:var(--gray-700); margin:0 0 1rem; }
+  </style>
+</head>
+<script>
+'use strict';
+
+const TOURS_JSON_URL = 'assets/data/tours.json';
+
+async function populateServiceSelect() {
+  const select = document.getElementById('service');
+  const help = document.getElementById('service-help');
+
+  if (!select) return;
+
+  // Estado inicial
+  select.innerHTML = '<option value="">Loading options…</option>';
+  select.disabled = true;
+
+  try {
+    const res = await fetch(TOURS_JSON_URL, { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+
+    const tours = Array.isArray(data?.tours) ? data.tours : [];
+    // Tomamos solo 'name', únicos y ordenados alfabéticamente
+    const names = [...new Set(
+      tours
+        .map(t => (typeof t?.name === 'string' ? t.name.trim() : ''))
+        .filter(Boolean)
+    )].sort((a, b) => a.localeCompare(b));
+
+    // Render
+    if (names.length) {
+      select.innerHTML = '<option value="">Select a service</option>';
+      names.forEach(name => {
+        const opt = document.createElement('option');
+        opt.value = name;
+        opt.textContent = name;
+        select.appendChild(opt);
+      });
+      help && (help.textContent = 'Choose a service from our current tours.');
+      select.disabled = false;
+    } else {
+      select.innerHTML = '<option value="">No tours available</option>';
+      help && (help.textContent = 'No tours found. Please try again later.');
+      select.disabled = true;
+    }
+
+  } catch (err) {
+    console.error('Error loading tours:', err);
+    select.innerHTML = '<option value="">Couldn’t load tours</option>';
+    help && (help.textContent = 'Please refresh or contact us on WhatsApp.');
+    select.disabled = true;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', populateServiceSelect);
+</script>
+
+
+<body>
+  <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+
+<!-- NAV (header fijo con hamburguesa) -->
+<nav class="nav" id="header" role="navigation" aria-label="Main menu">
+  <div class="container nav__inner">
+    <!-- Brand -->
+    <a href="index.html#home" class="brand" aria-label="Nóku Travel — Home">
+      <img src="assets/img/noku-logo.png" alt="Nokú Travel logo" class="brand__logo">
+      <span class="brand__name">Nokú Travel</span>
+    </a>
+
+    <!-- Botón hamburguesa (solo móvil) -->
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-expanded="false"
+      aria-controls="navMobile"
+      aria-label="Open main menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Links desktop -->
+    <div class="nav__links" role="menubar">
+      <a href="index.html#home" class="nav__link" role="menuitem">Home</a>
+      <a href="tours.html" class="nav__link" role="menuitem">All Tours</a>
+      <a href="about.html" class="nav__link" role="menuitem">About</a>
+      <a href="contact.html" class="nav__link" role="menuitem">Contact</a>
+      <a
+        href="https://wa.me/50685675060"
+        target="_blank"
+        rel="noopener"
+        class="nav__link btn-whatsapp-mobile"
+        aria-label="Contact us via WhatsApp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Menú móvil tipo overlay (como Natura) -->
+<nav class="nav-mobile" id="navMobile" aria-label="Mobile menu" aria-hidden="true" hidden>
+  <div class="mobile-logo">
+    <img
+      src="assets/img/noku-logo.png"
+      alt="Nokú Travel logo"
+      width="120"
+      height="40"
+      loading="lazy">
+  </div>
+
+  <ul>
+    <li><a href="index.html#home" data-close>Home</a></li>
+    <li><a href="tours.html" data-close>All Tours</a></li>
+    <li><a href="about.html" data-close>About</a></li>
+    <li><a href="contact.html" data-close>Contact</a></li>
+  </ul>
+</nav>
+
+
+
+  <main id="main" class="main">
+    <!-- HERO -->
+    <header class="page-hero">
+      <div class="container">
+        <h1 class="h2">Book a Visit or Ask a Question</h1>
+        <p class="lead">Tell us your dates, interests, and travel pace — we’ll help you plan something unforgettable in La Fortuna.</p>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <section class="section">
+      <div class="container contact-grid">
+        <!-- LEFT: FORM -->
+        <article class="card">
+          <div class="card__pad">
+            <h2 class="h2">Schedule an Appointment</h2>
+            <p class="muted">Let’s design your ideal experience. Share a few details and we’ll get back to you shortly.</p>
+
+            <form class="form" action="#" method="POST">
+              <div class="input--split">
+                <div>
+                  <label class="label" for="first_name">First Name</label>
+                  <input class="input" id="first_name" name="first_name" type="text" placeholder="Your first name" required />
+                </div>
+                <div>
+                  <label class="label" for="last_name">Last Name</label>
+                  <input class="input" id="last_name" name="last_name" type="text" placeholder="Your last name" required />
+                </div>
+              </div>
+
+              <div class="input--split">
+                <div>
+                  <label class="label" for="email">Email</label>
+                  <input class="input" id="email" name="email" type="email" placeholder="you@email.com" required />
+                </div>
+                <div>
+                  <label class="label" for="phone">Phone (WhatsApp)</label>
+                  <input class="input" id="phone" name="phone" type="tel" placeholder="+506 0000-0000" />
+                  <p class="help">International format preferred.</p>
+                </div>
+              </div>
+
+              <div class="grid--2">
+                <!-- Service of Interest (poblado por JS) -->
+                <div class="span-2">
+                  <fieldset class="service-group">
+                    <legend class="label">Services of Interest</legend>
+                    <p class="help">You can select more than one option.</p>
+
+                    <div class="service-options">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="services[]" value="Daily tours">
+                        <span>Daily tours in La Fortuna</span>
+                      </label>
+
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="services[]" value="Private transfers">
+                        <span>Private transfers</span>
+                      </label>
+
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="services[]" value="Shuttle services">
+                        <span>Shared shuttle services</span>
+                      </label>
+
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="services[]" value="Custom multi-day itinerary">
+                        <span>Custom multi-day itinerary (tailor-made package)</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+
+
+                <!-- Tour Type -->
+                <div>
+                <label class="label" for="tour_type">Tour Type</label>
+                <select class="select" id="tour_type" name="tour_type" required>
+                    <option value="">Select type</option>
+                    <option value="shared">Shared</option>
+                    <option value="private">Private</option>
+                </select>
+                </div>
+
+
+                <div>
+                  <label class="label" for="budget">Budget (USD)</label>
+                  <select class="select" id="budget" name="budget">
+                    <option value="">Select range</option>
+                    <option>Under $100</option>
+                    <option>$100 – $250</option>
+                    <option>$250 – $500</option>
+                    <option>$500+</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="label" for="date">Preferred Date</label>
+                  <input class="input" id="date" name="date" type="date" />
+                </div>
+
+                <div>
+                  <label class="label" for="time">Preferred Time</label>
+                  <select class="select" id="time" name="time">
+                    <option value="">Select time</option>
+                    <option>Morning</option>
+                    <option>Afternoon</option>
+                    <option>Evening</option>
+                  </select>
+                </div>
+
+                <div class="span-2">
+                  <label class="label" for="subject">Subject</label>
+                  <input class="input" id="subject" name="subject" type="text" placeholder="Tour of interest or question" />
+                </div>
+
+                <div class="span-2">
+                  <label class="label" for="message">Message</label>
+                  <textarea class="textarea" id="message" name="message" placeholder="Tell us about your plans, group size, fitness level, dates…"></textarea>
+                </div>
+
+                <div class="span-2">
+                  <label style="display:flex; gap:.5rem; align-items:flex-start;">
+                    <input type="checkbox" required />
+                    <span class="muted">
+                      I agree to be contacted about my request and accept the 
+                      <a href="privacy-policy.html" class="footer__link" target="_blank">privacy policy</a>.
+                  </span>
+                  </label>
+                </div>
+
+                <div class="span-2">
+                  <button type="submit" class="btn btn--primary">
+                    <i class="fa-solid fa-paper-plane"></i> Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </article>
+
+        <!-- RIGHT: CONTACT CARD + MAP -->
+        <aside class="card">
+          <div class="card__pad">
+            <h2 class="h2">Contact Details</h2>
+            <p class="muted">La Fortuna · San Carlos · Costa Rica</p>
+
+            <ul class="contact-list">
+              <li><strong>Tel:</strong> <a href="tel:+50683018999">+506 85675060</a></li>
+              <li><strong>Email:</strong> <a href="mailto:info@olmedaexperiences.com">nokutravelcr@gmail.com</a></li>
+              <li><strong>WhatsApp:</strong> Chat now</li>
+            </ul>
+
+            <a class="btn btn--wa" href="https://wa.me/50685675060" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> Message on WhatsApp
+            </a>
+
+            <h3 class="h2" style="margin-top:1.25rem;">Hours</h3>
+            <ul class="hours">
+              <li><span>Monday – Sunday</span><span>08:00 — 17:00</span></li>
+
+            </ul>
+
+            <div class="map">
+              <!-- Simple Google Maps embed around La Fortuna -->
+              <iframe
+                title="Map — La Fortuna, Costa Rica"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=La%20Fortuna%20de%20San%20Carlos%2C%20Costa%20Rica&z=13&output=embed">
+              </iframe>
+            </div>
+
+            <p class="muted" style="margin-top:.75rem;">
+              <strong>Our Location:</strong> La Fortuna de San Carlos, Alajuela, Costa Rica
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="brand brand--footer">Nóku Travel</div>
+      <p class="muted">
+        Authentic, wellness first adventures born from the heart of La Fortuna, Costa Rica.
+      </p>
+
+      <div class="footer__contact-info">
+        <a href="mailto:nokutravelcr@gmail.com" class="footer__link" aria-label="Send an email">
+          <i class="fas fa-envelope"></i> nokutravelcr@gmail.com
+        </a>
+        <span class="footer__link">
+          <i class="fas fa-map-marker-alt"></i> La Fortuna, San Carlos, Costa Rica
+        </span>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.instagram.com/nokutravelcr" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/50685675060" target="_blank" rel="noopener" aria-label="Contact us via WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <p class="tiny">© 2025 Nóku Travel. All rights reserved. | Pura Vida 🇨🇷</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js" defer></script>
+
+
+</body>
+</html>

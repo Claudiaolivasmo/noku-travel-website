@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>About Nokú Travel</title>
+  <meta name="description" content="Meet the founders of Nokú Travel and discover how local roots and passion create authentic adventures in La Fortuna, Costa Rica." />
+
+  <!-- Same as in your index -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/about.css" />
+
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+
+<!-- NAV (header fijo con hamburguesa) -->
+<nav class="nav" id="header" role="navigation" aria-label="Main menu">
+  <div class="container nav__inner">
+    <!-- Brand -->
+    <a href="index.html#home" class="brand" aria-label="Nóku Travel — Home">
+      <img src="assets/img/noku-logo.png" alt="Nokú Travel logo" class="brand__logo">
+      <span class="brand__name">Nokú Travel</span>
+    </a>
+
+    <!-- Botón hamburguesa (solo móvil) -->
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-expanded="false"
+      aria-controls="navMobile"
+      aria-label="Open main menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Links desktop -->
+    <div class="nav__links" role="menubar">
+      <a href="index.html#home" class="nav__link" role="menuitem">Home</a>
+      <a href="tours.html" class="nav__link" role="menuitem">All Tours</a>
+      <a href="about.html" class="nav__link" role="menuitem">About</a>
+      <a href="contact.html" class="nav__link" role="menuitem">Contact</a>
+      <a
+        href="https://wa.me/50685675060"
+        target="_blank"
+        rel="noopener"
+        class="nav__link btn-whatsapp-mobile"
+        aria-label="Contact us via WhatsApp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Menú móvil tipo overlay (como Natura) -->
+<nav class="nav-mobile" id="navMobile" aria-label="Mobile menu" aria-hidden="true" hidden>
+  <div class="mobile-logo">
+    <img
+      src="assets/img/noku-logo.png"
+      alt="Nokú Travel logo"
+      width="120"
+      height="40"
+      loading="lazy">
+  </div>
+
+  <ul>
+    <li><a href="index.html#home" data-close>Home</a></li>
+    <li><a href="tours.html" data-close>All Tours</a></li>
+    <li><a href="about.html" data-close>About</a></li>
+    <li><a href="contact.html" data-close>Contact</a></li>
+  </ul>
+</nav>
+
+
+
+  <main id="main" class="main">
+<header class="page-hero fadein">
+  <div class="page-hero__overlay"></div> 
+
+  <img 
+    src="assets/img/about-herow.jpeg" 
+    alt="Vista de La Fortuna para la sección About" 
+    class="page-hero__img"
+  >
+
+  <div class="container page-hero__content">
+    <h1 class="h2">About Nokú Travel</h1>
+    <p class="lead">
+      Authentic, locally curated adventures in La Fortuna, guided by family roots, expertise and a lifelong passion for nature.
+    </p>
+  </div>
+</header>
+
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section fade-section">
+
+      <div class="container">
+        <h2>Welcome!</h2>
+        <p>We’re Claudia and Manuel, founders of <strong>Nokú Travel</strong>. Both born and raised in La Fortuna, we share a deep connection with this land, its people and the natural beauty that surrounds us.</p>
+
+        <p>Manuel has over 20 years of experience in tourism and was one of the pioneers of the industry in the region. His vision as a travel designer focuses on creating meaningful experiences that celebrate La Fortuna’s authenticity and natural wonder.</p>
+
+        <p>Claudia has worked for years in hospitality, tour coordination, and guest assistance. Her approach combines creativity and care to design personalized adventures that connect travelers with local life, culture, and comfort.</p>
+
+        <p>At Nóku Travel, every tour and recommendation is built on trust, knowledge, and love for our home. We adapt each experience to the season, the weather, and your interests, making sure your time in La Fortuna is unforgettable.</p>
+      </div>
+    </section>
+
+    <!-- FOUNDERS SECTION -->
+    <section class="about-section fade-section">
+      <div class="container">
+        <div class="profile">
+          <img src="assets/img/profile-claudia.jpeg" alt="Claudia Olivas, co-founder of Nóku Travel" loading="lazy" />
+          <div class="profile-info">
+            <h3>Claudia Olivas</h3>
+            <p>Co-Founder & Experience Designer</p>
+            <p>Born and raised in La Fortuna, Claudia brings warmth and creativity to every detail. With experience in hotel reception, tour coordination and guest assistance, she ensures each traveler feels connected and at home. She speaks Spanish, English and basic German, and is always happy to help you plan your stay.</p>
+          </div>
+        </div>
+
+        <div class="profile" style="margin-top:2rem;">
+          <img src="assets/img/profile-manuel.jpeg" alt="Manuel Emilio Morera, co-founder of Nóku Travel" loading="lazy" />
+          <div class="profile-info">
+            <h3>Manuel Emilio Morera</h3>
+            <p>Co-Founder & Travel Designer</p>
+            <p>Also born and raised in La Fortuna, Manuel witnessed its transformation from a quiet farming village into one of Costa Rica’s most iconic destinations. With over 20 years in tourism, his local insight and passion for storytelling help travelers experience the region’s true essence, far from the ordinary.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="about-section section--light fade-section">
+      <div class="container">
+        <h2>Values</h2>
+        <ul>
+          <li><strong>Authenticity:</strong> Every experience is shaped by our local roots and genuine community ties.</li>
+          <li><strong>Flexibility:</strong> Plans adapt to your rhythm, the season, and nature’s flow.</li>
+          <li><strong>Sustainability:</strong> We support small local businesses and promote responsible travel.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="about-section fade-section">
+      <div class="container" style="text-align:center;">
+        <h2>Ready to explore La Fortuna?</h2>
+        <p>Send us a message with your travel dates and interests and we’ll help you design a trip that feels authentic and unforgettable.</p>
+        <a href="contact.html" class="btn btn--primary">Get in touch</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="brand brand--footer">Nóku Travel</div>
+      <p class="muted">
+        Authentic, wellness first adventures born from the heart of La Fortuna, Costa Rica.
+      </p>
+
+      <div class="footer__contact-info">
+        <a href="mailto:nokutravelcr@gmail.com" class="footer__link" aria-label="Send an email">
+          <i class="fas fa-envelope"></i> nokutravelcr@gmail.com
+        </a>
+        <span class="footer__link">
+          <i class="fas fa-map-marker-alt"></i> La Fortuna, San Carlos, Costa Rica
+        </span>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.instagram.com/nokutravelcr" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/50685675060" target="_blank" rel="noopener" aria-label="Contact us via WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <p class="tiny">© 2025 Nóku Travel. All rights reserved. | Pura Vida 🇨🇷</p>
+    </div>
+  </footer>
+
+  <!-- Nav JS (igual que en index, solo para el menú móvil) -->
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/nav.js" defer></script>
+
+
+</body>
+</html>

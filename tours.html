@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Tours — Nokú Travel</title>
+  <meta name="description" content="Browse all tours by Nokú Travel in La Fortuna, Costa Rica — authentic, wellness-focused experiences curated by locals." />
+  <link rel="canonical" href="tours.html" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Tours — Nokú Travel" />
+  <meta property="og:description" content="Handpicked, wellness-minded tours to discover La Fortuna with local insight." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="tours.html" />
+  <meta property="og:image" content="assets/img/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nokú Travel — Tours" />
+  <meta name="twitter:description" content="Authentic La Fortuna tours with a wellness twist." />
+  <meta name="twitter:image" content="assets/img/twitter-image.jpg" />
+
+  <!-- Igual que en tu index -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <!-- Tus estilos globales -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Ajustes específicos para esta página -->
+  <style>
+    .main {
+      padding-top: 64px;
+    }
+
+/* Overlay suave, no tan oscuro */
+/* ===== HERO CON IMAGEN ===== */
+    .page-hero {
+      position: relative;
+      min-height: 340px;
+      height: 55vh;
+      max-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .page-hero__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .page-hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.65)
+      );
+      z-index: 2;
+    }
+
+    .page-hero__content {
+      position: relative;
+      z-index: 3;
+      max-width: 720px;
+      padding: 0 1.5rem;
+    }
+
+    .page-hero .h2 {
+      margin: 0 0 0.5rem;
+      color: #fff;
+    }
+
+    .page-hero .lead {
+      margin: 0 auto;
+      max-width: 600px;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    @media (max-width: 640px) {
+      .page-hero {
+        height: 50vh;
+        min-height: 300px;
+      }
+      .page-hero__content {
+        padding: 0 1.25rem;
+      }
+    }
+
+    /* ===== FADE IN ===== */
+    .fadein {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+
+
+<!-- NAV (header fijo con hamburguesa) -->
+<nav class="nav" id="header" role="navigation" aria-label="Main menu">
+  <div class="container nav__inner">
+    <!-- Brand -->
+    <a href="index.html#home" class="brand" aria-label="Nóku Travel — Home">
+      <img src="assets/img/noku-logo.png" alt="Nokú Travel logo" class="brand__logo">
+      <span class="brand__name">Nokú Travel</span>
+    </a>
+
+    <!-- Botón hamburguesa (solo móvil) -->
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-expanded="false"
+      aria-controls="navMobile"
+      aria-label="Open main menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Links desktop -->
+    <div class="nav__links" role="menubar">
+      <a href="index.html#home" class="nav__link" role="menuitem">Home</a>
+      <a href="tours.html" class="nav__link" role="menuitem">All Tours</a>
+      <a href="about.html" class="nav__link" role="menuitem">About</a>
+      <a href="contact.html" class="nav__link" role="menuitem">Contact</a>
+      <a
+        href="https://wa.me/50685675060"
+        target="_blank"
+        rel="noopener"
+        class="nav__link btn-whatsapp-mobile"
+        aria-label="Contact us via WhatsApp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Menú móvil tipo overlay (como Natura) -->
+<nav class="nav-mobile" id="navMobile" aria-label="Mobile menu" aria-hidden="true" hidden>
+  <div class="mobile-logo">
+    <img
+      src="assets/img/noku-logo.png"
+      alt="Nokú Travel logo"
+      width="120"
+      height="40"
+      loading="lazy">
+  </div>
+
+  <ul>
+    <li><a href="index.html#home" data-close>Home</a></li>
+    <li><a href="tours.html" data-close>All Tours</a></li>
+    <li><a href="about.html" data-close>About</a></li>
+    <li><a href="contact.html" data-close>Contact</a></li>
+  </ul>
+</nav>
+
+
+  <main id="main" class="main">
+    <!-- HERO -->
+    <header class="page-hero fadein">
+      <div class="page-hero__overlay"></div>
+      <img src="assets/img/about-herow.jpeg" alt="La Fortuna tours landscape" class="page-hero__img">
+
+      <div class="container page-hero__content">
+        <h1 class="h2">All Tours</h1>
+        <p class="lead">
+          Discover authentic, wellness-focused adventures curated by locals who truly know La Fortuna.
+        </p>
+      </div>
+    </header>
+
+    <!-- Listado -->
+    <section class="section section--light" aria-labelledby="tours-title">
+      <div class="container">
+        <div class="section__header" style="margin-bottom:1rem;">
+          <h2 id="tours-title" class="h2">Browse</h2>
+        </div>
+        <div id="tours-container" class="grid grid--3">
+          <!-- Cards renderizadas por JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="brand brand--footer">Nóku Travel</div>
+      <p class="muted">
+        Authentic, wellness first adventures born from the heart of La Fortuna, Costa Rica.
+      </p>
+
+      <div class="footer__contact-info">
+        <a href="mailto:nokutravelcr@gmail.com" class="footer__link" aria-label="Send an email">
+          <i class="fas fa-envelope"></i> nokutravelcr@gmail.com
+        </a>
+        <span class="footer__link">
+          <i class="fas fa-map-marker-alt"></i> La Fortuna, San Carlos, Costa Rica
+        </span>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.instagram.com/nokutravelcr" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/50685675060" target="_blank" rel="noopener" aria-label="Contact us via WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <p class="tiny">© 2025 Nóku Travel. All rights reserved. | Pura Vida 🇨🇷</p>
+    </div>
+  </footer>
+
+  <!-- Page JS (in-line para esta vista) -->
+   <script src="assets/js/nav.js" defer></script>
+  <script>
+    'use strict';
+
+
+
+    const TOURS_JSON_URL = 'assets/data/tours.json';
+    const DEFAULT_TOUR_IMG = 'assets/img/tours/_placeholder.jpg';
+
+    /* Helpers */
+    function el(tag, cls, html){
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (html != null) n.innerHTML = html;
+      return n;
+    }
+    const textOr = (s, fb = '') => (typeof s === 'string' ? s : fb);
+
+    /* Render de card (reusa tus clases globales) */
+    function renderCard(tour){
+      const { id, name, image, description, duration, price } = tour || {};
+
+      const card = el('article', 'card');
+
+      // Media
+      const media = el('figure', 'card__media');
+      const img = el('img');
+      img.src = textOr(image, DEFAULT_TOUR_IMG);
+      img.alt = textOr(name, 'Tour photo');
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      media.appendChild(img);
+      card.appendChild(media);
+
+      // Body
+      const body = el('div', 'card__pad');
+      const title = el('h3', 'card__title', textOr(name, 'Tour'));
+      const desc = el('p', 'card__text clamp-2', textOr(description, ''));
+      body.appendChild(title);
+      body.appendChild(desc);
+
+      // Meta simple (duración y precio)
+      const meta = el('div', 'card__meta');
+      if (duration) meta.appendChild(el('span', 'badge', `⏱ ${duration}`));
+      if (price) meta.appendChild(el('span', 'badge badge--soft', `${price}`));
+      body.appendChild(meta);
+
+      // CTA
+      const cta = el('div', 'card__cta');
+      const link = el('a', 'btn btn--primary btn--full-width', 'View details');
+      link.href = `tour.html?id=${id}`;
+      link.setAttribute('aria-label', `Open ${textOr(name,'tour')} details`);
+      cta.appendChild(link);
+      body.appendChild(cta);
+
+      card.appendChild(body);
+      return card;
+    }
+
+    async function loadTours(){
+      const container = document.getElementById('tours-container');
+      if (!container) return;
+
+      // Fallback de grilla si por alguna razón no carga el CSS
+      if (getComputedStyle(container).display === 'block') {
+        container.style.display = 'grid';
+        container.style.gap = '1.5rem';
+        container.style.gridTemplateColumns = 'repeat(auto-fit, minmax(260px, 1fr))';
+      }
+
+      try{
+        const res = await fetch(TOURS_JSON_URL, { cache:'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const tours = Array.isArray(data?.tours) ? data.tours : [];
+
+        container.innerHTML = '';
+        tours.forEach(t => container.appendChild(renderCard(t)));
+
+        if (!tours.length){
+          const empty = el('div', 'card');
+          empty.innerHTML = `
+            <div class="card__pad">
+              <h3 class="card__title">No tours available</h3>
+              <p class="card__text">Please check back soon or contact us for custom options.</p>
+            </div>`;
+          container.appendChild(empty);
+        }
+      }catch(err){
+        console.error('Error loading tours:', err);
+        const warn = el('div', 'card');
+        warn.innerHTML = `
+          <div class="card__pad">
+            <h3 class="card__title">We couldn’t load tours</h3>
+            <p class="card__text">Please try again later or contact us on WhatsApp.</p>
+          </div>`;
+        container.appendChild(warn);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadTours);
+  </script>
+</body>
+</html>

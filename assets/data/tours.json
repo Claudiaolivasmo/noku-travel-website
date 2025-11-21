@@ -1,0 +1,106 @@
+{
+  "tours": [
+    {
+      "id": 1,
+      "name": "Sloth Watching Tour",
+      "image": "assets/img/tours/sloth-watching.jpg",
+      "duration": "2.5 hours",
+      "groupSize": "2–10 people",
+      "price": "$45",
+      "difficulty": "Easy",
+      "description": "Observe Costa Rica’s most iconic animal — the sloth — in its natural habitat. A peaceful, educational wildlife experience perfect for families and nature lovers.",
+      "longDescription": "Join our naturalist guide for a relaxed walk through one of La Fortuna’s best sloth habitats. Spot both two- and three-toed sloths, learn about their behavior, ecology, and how they survive high in the rainforest canopy. Along the trail, you may also encounter colorful birds, butterflies, and other local wildlife. A must-do experience for wildlife enthusiasts and photographers.",
+      "highlights": [
+        "Spot two- and three-toed sloths",
+        "Guided walk through natural sloth habitat",
+        "Birdwatching and wildlife observation",
+        "Perfect for families and all ages"
+      ],
+      "photos": [
+        "assets/img/tours/sloth-1.jpg",
+        "assets/img/tours/sloth-2.jpg",
+        "assets/img/tours/sloth-3.jpg"
+      ],
+      "schedule": [
+        "08:00 AM – Morning tour",
+        "01:00 PM – Midday tour",
+        "03:30 PM – Afternoon tour"
+      ],
+      "whatToBring": [
+        "Comfortable walking shoes",
+        "Sunscreen",
+        "Reusable water bottle",
+        "Camera"
+      ],
+      "includes": "Transportation, naturalist guide, entrance fees"
+    },
+    {
+      "id": 2,
+      "name": "Night Walk in the Rainforest",
+      "image": "assets/img/tours/night-walk.jpg",
+      "duration": "2.5 hours",
+      "groupSize": "2–10 people",
+      "price": "$45",
+      "difficulty": "Easy",
+      "description": "Discover the magic of the rainforest after sunset. Spot frogs, insects, reptiles, birds, and other nocturnal wildlife with a professional naturalist guide.",
+      "longDescription": "As night falls, the rainforest transforms into an entirely different world. This guided Night Walk gives you the chance to observe Costa Rica’s vibrant nocturnal wildlife — including tree frogs, snakes, insects, owls, and more. Equipped with flashlights, your guide will reveal the sounds, secrets, and behaviors of nighttime creatures. An unforgettable experience ideal for nature lovers and curious travelers.",
+      "highlights": [
+        "Nighttime wildlife observation",
+        "Frog and reptile spotting",
+        "Guided walk with expert naturalist",
+        "Great opportunities for macro photography"
+      ],
+      "photos": [
+        "assets/img/tours/nightwalk-1.jpg",
+        "assets/img/tours/nightwalk-2.jpg",
+        "assets/img/tours/nightwalk-3.jpg"
+      ],
+      "schedule": [
+        "06:00 PM – Begin Night Walk",
+        "08:30 PM – Return to hotel"
+      ],
+      "whatToBring": [
+        "Closed walking shoes",
+        "Light jacket",
+        "Insect repellent",
+        "Camera or phone with flashlight"
+      ],
+      "includes": "Transportation, naturalist guide, flashlights"
+    },
+    {
+      "id": 3,
+      "name": "La Fortuna Waterfall Adventure",
+      "image": "assets/img/tours/costa-rica-la_fortuna-waterfall.jpg",
+      "duration": "Half Day (4 hours)",
+      "groupSize": "2–8 people",
+      "price": "$65",
+      "difficulty": "Moderate",
+      "description": "Descend 500 steps to reach the breathtaking La Fortuna Waterfall. Swim in its crystal-clear pools and explore hidden viewpoints surrounded by lush rainforest.",
+      "longDescription": "Discover one of Costa Rica’s most iconic natural wonders. After a scenic descent to the base of the waterfall, enjoy a refreshing swim and capture unforgettable photos of the turquoise pool. Your guide will also reveal the area’s fascinating geology and local flora.",
+      "highlights": [
+        "70-meter waterfall viewing",
+        "Swimming in natural pools",
+        "Local viewpoints",
+        "Rainforest flora and fauna"
+      ],
+      "photos": [
+        "assets/img/tours/waterfall-1.jpg",
+        "assets/img/tours/waterfall-2.jpg",
+        "assets/img/tours/waterfall-3.jpg"
+      ],
+      "schedule": [
+        "08:00 AM - Hotel pick-up",
+        "08:30 AM - Arrive at La Fortuna Waterfall entrance",
+        "09:00 AM - Guided descent and free time for swimming",
+        "11:30 AM - Return to hotel"
+      ],
+      "whatToBring": [
+        "Water shoes or sandals with grip",
+        "Towel and swimsuit",
+        "Insect repellent",
+        "Camera or phone waterproof case"
+      ],
+      "includes": "Transportation, guide, entrance fees, snacks"
+    }
+  ]
+}

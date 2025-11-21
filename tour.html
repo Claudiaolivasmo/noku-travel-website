@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Nokú Travel — Tour Details</title>
+  <meta name="description" content="Tour details — Nokú Travel, La Fortuna, Costa Rica. Authentic, wellness-focused experiences with local insight." />
+  <link rel="canonical" href="tour.html" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Nokú Travel — Tour Details" />
+  <meta property="og:description" content="Discover the details of your Nokú Travel experience in La Fortuna, Costa Rica." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="tour.html" />
+  <meta property="og:image" content="assets/img/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nokú Travel — Tour" />
+  <meta name="twitter:description" content="Authentic La Fortuna tours with a wellness twist." />
+  <meta name="twitter:image" content="assets/img/twitter-image.jpg" />
+
+  <!-- Igual que en tu index -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <!-- Estilos base + estilos del detalle -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/tour.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+
+
+  <!-- NAV -->
+<!-- NAV (header fijo con hamburguesa) -->
+<nav class="nav" id="header" role="navigation" aria-label="Main menu">
+  <div class="container nav__inner">
+    <!-- Brand -->
+    <a href="index.html#home" class="brand" aria-label="Nóku Travel — Home">
+      <img src="assets/img/noku-logo.png" alt="Nokú Travel logo" class="brand__logo">
+      <span class="brand__name">Nokú Travel</span>
+    </a>
+
+    <!-- Botón hamburguesa (solo móvil) -->
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-expanded="false"
+      aria-controls="navMobile"
+      aria-label="Open main menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Links desktop -->
+    <div class="nav__links" role="menubar">
+      <a href="index.html#home" class="nav__link" role="menuitem">Home</a>
+      <a href="tours.html" class="nav__link" role="menuitem">All Tours</a>
+      <a href="about.html" class="nav__link" role="menuitem">About</a>
+      <a href="contact.html" class="nav__link" role="menuitem">Contact</a>
+      <a
+        href="https://wa.me/50685675060"
+        target="_blank"
+        rel="noopener"
+        class="nav__link btn-whatsapp-mobile"
+        aria-label="Contact us via WhatsApp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Menú móvil tipo overlay (como Natura) -->
+<nav class="nav-mobile" id="navMobile" aria-label="Mobile menu" aria-hidden="true" hidden>
+  <div class="mobile-logo">
+    <img
+      src="assets/img/noku-logo.png"
+      alt="Nokú Travel logo"
+      width="120"
+      height="40"
+      loading="lazy">
+  </div>
+
+  <ul>
+    <li><a href="index.html#home" data-close>Home</a></li>
+    <li><a href="tours.html" data-close>All Tours</a></li>
+    <li><a href="about.html" data-close>About</a></li>
+    <li><a href="contact.html" data-close>Contact</a></li>
+  </ul>
+</nav>
+
+
+
+  <main id="main" class="main">
+<!-- HERO -->
+<header class="page-hero tour-hero" aria-describedby="tourMeta">
+  <img src="assets/img/about-herow.jpeg" alt="" class="page-hero__img">
+  <div class="page-hero__overlay"></div>
+
+  <div class="container">
+    <div class="page-hero__content">
+      <a href="tours.html" class="tour-back" aria-label="Back to tours">← Back to tours</a>
+
+      <h1 id="tourName" class="tour-title">Tour</h1>
+      <p id="tourMeta" class="tour-meta">Duration • Group size • Difficulty</p>
+
+      <div class="tour-hero__pricebox">
+        <div id="tourPrice" class="tour-price">$0</div>
+        <div class="tour-price__note">per person</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+    <!-- GALERÍA 
+    <section class="section" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title" class="h2">Photo Gallery</h2>
+        <div id="tourGallery" class="tour-gallery"></div>
+      </div>
+    </section> -->
+
+    <!-- DESCRIPCIÓN -->
+    <section class="section" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title" class="h2">About this tour</h2>
+        <p id="tourLong" class="text"></p>
+      </div>
+    </section>
+
+    <!-- 2 COLUMNAS -->
+    <section class="section">
+      <div class="container tour-cols">
+        <div class="tour-col">
+          <div class="mb-6">
+            <h3 class="h3">Highlights</h3>
+            <ul id="tourHighlights" class="list"></ul>
+          </div>
+          <div>
+            <h3 class="h3">What to bring</h3>
+            <ul id="tourBring" class="list list--grid"></ul>
+          </div>
+        </div>
+
+        <div class="tour-col">
+          <div class="mb-6">
+            <h3 class="h3">Daily Schedule</h3>
+            <div id="tourSchedule" class="tour-schedule"></div>
+          </div>
+
+          <div class="box">
+            <h3 class="h3 h3--tight">Includes</h3>
+            <p id="tourIncludes" class="text"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="tour-cta">
+          <div>
+            <h3 class="h3 h3--tight">Ready to book?</h3>
+            <p class="text">Go to our contact form with this tour preselected.</p>
+          </div>
+          <div class="tour-cta__actions">
+            <!-- El JS reemplazará el query param ?id= -->
+            <a id="ctaBook" href="contact.html" class="btn btn--primary">Book this tour</a>
+            <a href="tours.html" class="btn btn--secondary">Back to tours</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="brand brand--footer">Nóku Travel</div>
+      <p class="muted">
+        Authentic, wellness first adventures born from the heart of La Fortuna, Costa Rica.
+      </p>
+
+      <div class="footer__contact-info">
+        <a href="mailto:nokutravelcr@gmail.com" class="footer__link" aria-label="Send an email">
+          <i class="fas fa-envelope"></i> nokutravelcr@gmail.com
+        </a>
+        <span class="footer__link">
+          <i class="fas fa-map-marker-alt"></i> La Fortuna, San Carlos, Costa Rica
+        </span>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.instagram.com/nokutravelcr" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/50685675060" target="_blank" rel="noopener" aria-label="Contact us via WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <p class="tiny">© 2025 Nóku Travel. All rights reserved. | Pura Vida 🇨🇷</p>
+    </div>
+  </footer>
+
+
+  <!-- JS: pequeño toggle de nav + tu lógica del tour -->
+
+  <script src="assets/js/tour.js" defer></script>
+  <script src="assets/js/nav.js" defer></script>
+</body>
+</html>
