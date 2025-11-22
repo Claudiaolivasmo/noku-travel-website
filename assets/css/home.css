@@ -206,12 +206,14 @@
 /* ===== Ajustes para evitar zoom excesivo en mobile ===== */
 @media (max-width: 768px) {
 
-    /* Desactivar parallax en mobile (soluciona el zoom) */
     .wellness-bg {
-        background-attachment: scroll;    /* normal */
-        background-size: contain;         /* evita zoom extremo */
-        background-position: top center;  /* mueve la imagen hacia arriba */
+        background-image: url('../img/wellness-noku-vertical.JPG');
+        background-size: cover;
+        background-position: center top;
     }
+
+}
+
 
     /* Ajustar tamaños del contenido si querés más aire */
     .wellness-section {
