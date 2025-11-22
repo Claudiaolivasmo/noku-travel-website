@@ -202,3 +202,27 @@
         border-right: none;
     }
 }
+
+/* ===== Ajustes para evitar zoom excesivo en mobile ===== */
+@media (max-width: 768px) {
+
+    /* Desactivar parallax en mobile (soluciona el zoom) */
+    .wellness-bg {
+        background-attachment: scroll;    /* normal */
+        background-size: contain;         /* evita zoom extremo */
+        background-position: top center;  /* mueve la imagen hacia arriba */
+    }
+
+    /* Ajustar tamaños del contenido si querés más aire */
+    .wellness-section {
+        padding: 60px 0;
+    }
+
+    .wellness-title {
+        font-size: 1.8rem;
+    }
+
+    .wellness-subtitle {
+        font-size: 0.95rem;
+    }
+}
