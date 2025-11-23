@@ -256,7 +256,6 @@ button{font-family:inherit}
 }
 
 /* ===== Botón hamburguesa (icono) ===== */
-/* ===== Botón hamburguesa (icono) ===== */
 .hamburger{
   display:none;              /* oculto en desktop, visible en móvil abajo */
   flex-direction:column;
@@ -371,6 +370,17 @@ body.nav-open{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* ===== 7) Buttons ===== */
 .btn{
   display:inline-block;padding:.75rem 2rem;border-radius:.6rem;font-weight:700;
@@ -394,6 +404,19 @@ body.nav-open{
 }
 .btn-whatsapp:hover{background:var(--accent-sand)}
 .btn-whatsapp i{margin-right:.5rem}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ===== 8) Cards ===== */
 .card{
@@ -507,37 +530,7 @@ body.nav-open{
 .input[aria-invalid="true"], .textarea[aria-invalid="true"]{ border-color:#dc2626; }
 
 
-/* ===== Contact ===== */
 
-.service-group {
-  border: 1px solid rgba(0,0,0,.06);
-  border-radius: 10px;
-  padding: 0.75rem 0.85rem;
-  background: #fafafa;
-}
-
-.service-options {
-  display: grid;
-  gap: 0.35rem;
-  margin-top: 0.35rem;
-}
-
-.checkbox-inline {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-  color: var(--gray-700);
-}
-
-.checkbox-inline input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-}
-
-
-
-.helper--error{ color:#b91c1c; }
 
 /* ===== 11) Tours listing (genérico) ===== */
 #tours-container{
@@ -683,7 +676,7 @@ body.nav-open{
   color: var(--white);
   overflow: hidden;
   background: var(--noku-gradient);
-  margin-top: 64px; /* para compensar el nav fijo */
+  margin-top: 0px; /* para compensar el nav fijo */
 }
 
 .page-hero__img{
