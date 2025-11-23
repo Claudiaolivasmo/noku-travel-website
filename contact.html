@@ -107,14 +107,13 @@
           <div class="card__pad contact-card__pad">
             <h2 class="h2">Schedule an Appointment</h2>
             <p class="muted">Let’s design your ideal experience. Share a few details and we’ll get back to you shortly.</p>
+            
 
-              <form
-                class="form"
-                action="https://formspree.io/f/xqajgpwr"
-                method="POST"
-              >
-              <input type="hidden" name="_subject" value="New contact from Nokú Travel website">
-              <input type="hidden" name="_captcha" value="false">
+              <form class="form" id="contactForm" action="https://formspree.io/f/xqajgpwr" method="POST">
+
+                <input type="hidden" name="_subject" value="New contact from Nokú Travel website">
+                <input type="hidden" name="_captcha" value="false">
+
 
               <div class="input--split">
                 <div>
@@ -233,7 +232,14 @@
                   </button>
                 </div>
               </div>
-            </form>
+            
+              </form>
+
+              <p id="formSuccess"
+                style="display:none; margin-top:1rem; color:#065f46; font-weight:600;">
+                Your message was sent successfully! We’ll get back to you shortly.
+              </p>
+
           </div>
         </article>
 
@@ -308,5 +314,7 @@
 
   <script src="assets/js/nav.js" defer></script>
   <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/contact-form.js" defer></script>
+
 </body>
 </html>
