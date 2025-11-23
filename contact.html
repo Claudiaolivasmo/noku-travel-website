@@ -108,7 +108,14 @@
             <h2 class="h2">Schedule an Appointment</h2>
             <p class="muted">Let’s design your ideal experience. Share a few details and we’ll get back to you shortly.</p>
 
-            <form class="form" action="#" method="POST">
+              <form
+                class="form"
+                action="https://formspree.io/f/xqajgpwr"
+                method="POST"
+              >
+              <input type="hidden" name="_subject" value="New contact from Nokú Travel website">
+              <input type="hidden" name="_captcha" value="false">
+
               <div class="input--split">
                 <div>
                   <label class="label" for="first_name">First Name</label>
@@ -211,13 +218,14 @@
 
                 <div class="span-2">
                   <label style="display:flex; gap:.5rem; align-items:flex-start;">
-                    <input type="checkbox" required />
+                    <input type="checkbox" name="consent" value="yes" required />
                     <span class="muted">
                       I agree to be contacted about my request and accept the
                       <a href="privacy-policy.html" class="footer__link" target="_blank">privacy policy</a>.
                     </span>
                   </label>
                 </div>
+
 
                 <div class="span-2">
                   <button type="submit" class="btn btn--primary">
