@@ -1,106 +1,288 @@
 {
   "tours": [
+
     {
-      "id": 1,
-      "name": "Sloth Watching Tour",
-      "image": "assets/img/tours/sloth-watching.jpg",
-      "duration": "2.5 hours",
-      "groupSize": "2–10 people",
-      "price": "$45",
-      "difficulty": "Easy",
-      "description": "Observe Costa Rica’s most iconic animal — the sloth — in its natural habitat. A peaceful, educational wildlife experience perfect for families and nature lovers.",
-      "longDescription": "Join our naturalist guide for a relaxed walk through one of La Fortuna’s best sloth habitats. Spot both two- and three-toed sloths, learn about their behavior, ecology, and how they survive high in the rainforest canopy. Along the trail, you may also encounter colorful birds, butterflies, and other local wildlife. A must-do experience for wildlife enthusiasts and photographers.",
-      "highlights": [
-        "Spot two- and three-toed sloths",
-        "Guided walk through natural sloth habitat",
-        "Birdwatching and wildlife observation",
-        "Perfect for families and all ages"
-      ],
-      "photos": [
-        "assets/img/tours/sloth-1.jpg",
-        "assets/img/tours/sloth-2.jpg",
-        "assets/img/tours/sloth-3.jpg"
-      ],
-      "schedule": [
-        "08:00 AM – Morning tour",
-        "01:00 PM – Midday tour",
-        "03:30 PM – Afternoon tour"
-      ],
-      "whatToBring": [
-        "Comfortable walking shoes",
-        "Sunscreen",
-        "Reusable water bottle",
-        "Camera"
-      ],
-      "includes": "Transportation, naturalist guide, entrance fees"
-    },
-    {
-      "id": 2,
-      "name": "Night Walk in the Rainforest",
-      "image": "assets/img/tours/night-walk.jpg",
-      "duration": "2.5 hours",
-      "groupSize": "2–10 people",
-      "price": "$45",
-      "difficulty": "Easy",
-      "description": "Discover the magic of the rainforest after sunset. Spot frogs, insects, reptiles, birds, and other nocturnal wildlife with a professional naturalist guide.",
-      "longDescription": "As night falls, the rainforest transforms into an entirely different world. This guided Night Walk gives you the chance to observe Costa Rica’s vibrant nocturnal wildlife — including tree frogs, snakes, insects, owls, and more. Equipped with flashlights, your guide will reveal the sounds, secrets, and behaviors of nighttime creatures. An unforgettable experience ideal for nature lovers and curious travelers.",
-      "highlights": [
-        "Nighttime wildlife observation",
-        "Frog and reptile spotting",
-        "Guided walk with expert naturalist",
-        "Great opportunities for macro photography"
-      ],
-      "photos": [
-        "assets/img/tours/nightwalk-1.jpg",
-        "assets/img/tours/nightwalk-2.jpg",
-        "assets/img/tours/nightwalk-3.jpg"
-      ],
-      "schedule": [
-        "06:00 PM – Begin Night Walk",
-        "08:30 PM – Return to hotel"
-      ],
-      "whatToBring": [
-        "Closed walking shoes",
-        "Light jacket",
-        "Insect repellent",
-        "Camera or phone with flashlight"
-      ],
-      "includes": "Transportation, naturalist guide, flashlights"
-    },
-    {
-      "id": 3,
-      "name": "La Fortuna Waterfall Adventure",
-      "image": "assets/img/tours/costa-rica-la_fortuna-waterfall.jpg",
-      "duration": "Half Day (4 hours)",
-      "groupSize": "2–8 people",
-      "price": "$65",
-      "difficulty": "Moderate",
-      "description": "Descend 500 steps to reach the breathtaking La Fortuna Waterfall. Swim in its crystal-clear pools and explore hidden viewpoints surrounded by lush rainforest.",
-      "longDescription": "Discover one of Costa Rica’s most iconic natural wonders. After a scenic descent to the base of the waterfall, enjoy a refreshing swim and capture unforgettable photos of the turquoise pool. Your guide will also reveal the area’s fascinating geology and local flora.",
-      "highlights": [
-        "70-meter waterfall viewing",
-        "Swimming in natural pools",
-        "Local viewpoints",
-        "Rainforest flora and fauna"
-      ],
-      "photos": [
-        "assets/img/tours/waterfall-1.jpg",
-        "assets/img/tours/waterfall-2.jpg",
-        "assets/img/tours/waterfall-3.jpg"
-      ],
-      "schedule": [
-        "08:00 AM - Hotel pick-up",
-        "08:30 AM - Arrive at La Fortuna Waterfall entrance",
-        "09:00 AM - Guided descent and free time for swimming",
-        "11:30 AM - Return to hotel"
-      ],
-      "whatToBring": [
-        "Water shoes or sandals with grip",
-        "Towel and swimsuit",
-        "Insect repellent",
-        "Camera or phone waterproof case"
-      ],
-      "includes": "Transportation, guide, entrance fees, snacks"
-    }
+  "id": 1,
+  "name": "Combo Tour: Top 4 Activities in 1 Day",
+  "image": "assets/img/tours/combo-4in1/1.jpg",
+  "duration": "10.5–14 hours",
+  "price": "From $203",
+  "difficulty": "Moderate",
+  "description": "Experience La Fortuna’s must-see attractions in one full day: Arenal Volcano hike, La Fortuna Waterfall, Arenal Hanging Bridges, and the hot springs of your choice.",
+  "longDescription": "Designed for travelers who want to make the most of their time in La Fortuna, this full-day combo brings together the region’s top highlights. Start with a guided hike through the lava trails of El Silencio Reserve to reach one of the closest safe viewpoints of the Arenal Volcano. Continue to the iconic La Fortuna Waterfall, where you can swim or simply admire its 70-meter cascade. After a traditional Costa Rican lunch, explore the rainforest canopy on the Arenal Hanging Bridges, crossing impressive suspended bridges with great chances to spot wildlife. As night falls, unwind at the hot springs of your choice, with the option to include dinner. A complete, unforgettable day in Costa Rica’s adventure capital.",
+  "highlights": [
+    "Arenal Volcano viewpoint hike",
+    "Visit to La Fortuna Waterfall",
+    "Arenal Hanging Bridges circuit",
+    "Traditional Costa Rican lunch",
+    "Optional hot springs with dinner",
+    "Ideal for travelers short on time",
+    "Small groups and dedicated guide"
+  ],
+  "photos": [
+    "assets/img/tours/combo-4in1/2.jpg",
+    "assets/img/tours/combo-4in1/3.jpg",
+    "assets/img/tours/combo-4in1/4.jpg",
+    "assets/img/tours/combo-4in1/5.jpg",
+    "assets/img/tours/combo-4in1/6.jpg",
+    "assets/img/tours/combo-4in1/8.jpg",
+    "assets/img/tours/combo-4in1/9.jpg",
+    "assets/img/tours/combo-4in1/10.jpg"
+  ],
+  "schedule": [
+    "07:30 AM – Departure",
+    "06:00 PM or 09:30 PM – Return (depending on hot springs option)"
+  ],
+  "whatToBring": [
+    "Hiking or tennis shoes",
+    "Comfortable clothing",
+    "Rain jacket or poncho",
+    "Sunscreen and insect repellent",
+    "Swimsuit and towel (if visiting hot springs)",
+    "Extra money for snacks or tips"
+  ],
+  "includes": "Transportation with A/C and Wi-Fi, bilingual naturalist guide, entrance to El Silencio Reserve, La Fortuna Waterfall and Hanging Bridges, bottled water, snacks, traditional lunch, insurance. Hot springs entrance included when selected.",
+  "options": {
+    "2-in-1 (Volcano or Hanging Bridges + Waterfall)": "$105",
+    "2-in-1 + Lunch": "$122",
+    "3-in-1 (Volcano + Waterfall + Lunch + Hanging Bridges)": "$156",
+    "4-in-1 + Paradise Hot Springs + Dinner": "$193",
+    "4-in-1 + Baldi Hot Springs + Dinner": "$202",
+    "4-in-1 + Ecotermales + Dinner": "$230",
+    "4-in-1 + Tabacón": "$258",
+    "4-in-1 + The Springs": "$297"
+  }
+},
+
+  {
+    "id": 2,
+    "name": "Sloth Observation Tour – Day or Night",
+    "image": "assets/img/tours/sloth-observation/1.jpg",
+    "duration": "2.5 hours",
+    "price": "$61",
+    "difficulty": "Easy",
+    "description": "Observe Costa Rica’s iconic sloths in their natural habitat on a gentle rainforest walk. Choose from morning, afternoon, or nighttime departures.",
+    "longDescription": "This tour takes place just minutes from La Fortuna in a protected family-owned ecological project where sloths thrive naturally. Along a 1.5 km rainforest trail, your naturalist guide will help you spot both two- and three-toed sloths as they rest, feed, or move among the trees. Evening tours offer a higher chance of seeing active two-toed sloths. The experience emphasizes conservation and responsible wildlife observation, using high-quality equipment to view the animals without disturbing their behavior. A relaxing and educational experience ideal for families and nature lovers.",
+    "highlights": [
+      "Observation of two- and three-toed sloths",
+      "1.5 km rainforest trail along a river",
+      "Morning, afternoon, and night departures",
+      "High-quality observation equipment included",
+      "Family-friendly and small groups",
+      "Guided visit to a protected ecological project"
+    ],
+    "photos": [
+
+      "assets/img/tours/sloth-observation/2.jpg",
+      "assets/img/tours/sloth-observation/3.jpg",
+      "assets/img/tours/sloth-observation/4.jpg"
+    ],
+    "schedule": [
+      "08:00 AM – Morning tour",
+      "02:30 PM – Afternoon tour",
+      "05:30 PM – Night tour"
+    ],
+    "whatToBring": [
+      "Comfortable walking shoes",
+      "Light clothing",
+      "Rain jacket or poncho",
+      "Insect repellent",
+      "Extra money for snacks or tips"
+    ],
+    "includes": "Transportation with A/C and Wi-Fi, bilingual naturalist guide, entrance fee, professional observation equipment, bottled water, snacks, insurance"
+  },
+  {
+  "id": 3,
+  "name": "Nocturnal Experience & Costa Rican Dinner",
+  "image": "assets/img/tours/night-dinner/1.jpg",
+  "duration": "4 hours",
+  "price": "$84",
+  "difficulty": "Easy",
+  "description": "Discover the magic of the rainforest at night and enjoy a traditional Costa Rican dinner with a local family in La Tigra.",
+  "longDescription": "This night tour is perfect for travelers who want to explore Costa Rica’s nocturnal wildlife in an authentic and cultural setting. After a 30-minute drive to the town of La Tigra, you’ll visit the Mendez Family, who protect a regenerating forest on their property. Along a 600-meter trail, your guide will help you spot frogs, insects, birds, bats, and small mammals. The experience includes a visit to a frog sanctuary where several species — including red-eyed tree frogs, glass frogs, hammer frogs, and bullfrogs — can be observed up close in their natural habitat. The evening ends with a traditional dinner prepared on a wood-burning stove, enjoyed with panoramic nighttime views of the San Carlos plains.",
+  "highlights": [
+    "Night hike through regenerating tropical forest",
+    "Visit to an authentic frog sanctuary",
+    "Observation of nocturnal wildlife",
+    "Traditional Costa Rican dinner cooked on a wood-burning stove",
+    "Cultural experience with a local family",
+    "Small groups and dedicated guide"
+  ],
+  "photos": [
+    "assets/img/tours/night-dinner/2.jpg",
+    "assets/img/tours/night-dinner/3.jpg",
+    "assets/img/tours/night-dinner/4.jpg",
+    "assets/img/tours/night-dinner/5.jpg",
+    "assets/img/tours/night-dinner/6.jpg"
+  ],
+  "schedule": [
+    "05:00 PM – Departure",
+    "09:00 PM – Approximate return"
+  ],
+  "whatToBring": [
+    "Tennis shoes or sports sandals",
+    "Comfortable clothing",
+    "Rain jacket or poncho",
+    "Insect repellent",
+    "Extra money for snacks or tips"
+  ],
+  "includes": "Transportation with A/C and Wi-Fi, bilingual naturalist guide, sanctuary entrance, lanterns and flashlights, bottled water, traditional dinner, insurance"
+},
+
+{
+  "id": 4,
+  "name": "La Fortuna Waterfall Hike",
+  "image": "assets/img/tours/waterfall-hike/1.jpg",
+  "duration": "3 hours",
+  "price": "$63",
+  "difficulty": "Moderate",
+  "description": "Visit the famous 70-meter La Fortuna Waterfall, descend over 480 steps through lush rainforest, and enjoy a refreshing swim at the base.",
+  "longDescription": "Begin your adventure with a short drive from La Fortuna to the private reserve of the La Fortuna Waterfall. From the main viewpoint, take in breathtaking views before descending a 500-meter trail with more than 480 steps through dense rainforest. At the base, admire the power of this 70-meter cascade fed by the Children’s Eternal Rainforest. You may spot wildlife along the way, including coatis, toucans, and butterflies. Enjoy a relaxing swim, take photos, or simply appreciate the scenery before hiking back up and enjoying fresh tropical fruit. Your visit supports community projects in La Fortuna, including schools, road improvements, environmental programs, and social initiatives.",
+  "highlights": [
+    "70-meter (230 ft) La Fortuna Waterfall",
+    "Downhill trail with 480+ steps",
+    "Swim in crystal-clear natural pools",
+    "Scenic rainforest viewpoints",
+    "Wildlife spotting opportunities",
+    "Morning and afternoon departures"
+  ],
+  "photos": [
+    "assets/img/tours/waterfall-hike/2.jpg",
+    "assets/img/tours/waterfall-hike/3.jpg",
+    "assets/img/tours/waterfall-hike/4.jpg",
+    "assets/img/tours/waterfall-hike/5.jpg"
+  ],
+  "schedule": [
+    "08:00 AM – Morning tour",
+    "01:00 PM – Afternoon tour"
+  ],
+  "whatToBring": [
+    "Tennis or hiking shoes",
+    "Comfortable clothing",
+    "Rain jacket or poncho",
+    "Swimsuit and towel",
+    "Insect repellent",
+    "Camera",
+    "Extra money for snacks or tips"
+  ],
+  "includes": "Transportation with A/C and Wi-Fi, bilingual naturalist guide, waterfall entrance fee, towel, bottled water, snacks, insurance"
+},
+
+      {
+    "id": 5,
+    "name": "Arenal Volcano by Arenal Lake",
+    "image": "assets/img/tours/arenal-lake/1.jpg",
+    "duration": "4 hours",
+    "price": "$99",
+    "difficulty": "Easy",
+    "description": "Enjoy the best views of the Arenal Volcano with a relaxed rainforest walk and a scenic boat ride on Lake Arenal. A complete and family-friendly experience.",
+    "longDescription": "This tour combines a gentle 1.5 km rainforest walk in the Peninsula sector of Arenal Volcano National Park with a peaceful boat ride on Lake Arenal. Take in volcano and lake views from several lookout points and a 12-meter observation tower. After the hike, enjoy a boat ride to the small lakeside community of El Castillo, where a local family offers traditional Costa Rican snacks and drinks. Hot springs can be added after the tour if desired.",
+    "highlights": [
+      "1.5 km rainforest trail",
+      "Scenic boat ride on Lake Arenal",
+      "12-meter observation tower",
+      "Traditional Costa Rican snacks",
+      "Family-friendly and small groups",
+      "Optional hot springs add-on"
+    ],
+    "photos": [
+  
+      "assets/img/tours/arenal-lake/2.jpg",
+      "assets/img/tours/arenal-lake/3.jpg",
+      "assets/img/tours/arenal-lake/4.jpg",
+      "assets/img/tours/arenal-lake/5.jpg"
+    ],
+    "schedule": [
+      "08:00 AM – Morning departure",
+      "02:30 PM – Afternoon departure"
+    ],
+    "whatToBring": [
+      "Comfortable walking shoes",
+      "Rain jacket or poncho",
+      "Sunscreen and insect repellent",
+      "Swimsuit and towel (if adding hot springs)"
+    ],
+    "includes": "Transportation, naturalist guide, National Park entrance, snacks, bottled water, boat ride"
+  },
+  {
+  "id": 6,
+  "name": "Caño Negro & Río Frío Wildlife Boat Safari",
+  "image": "assets/img/tours/cano-negro/1.jpg",
+  "duration": "8 hours",
+  "price": "$89",
+  "difficulty": "Easy",
+  "description": "Explore one of Costa Rica’s most important wetlands on a peaceful boat safari along the Río Frío. An excellent opportunity to spot monkeys, caimans, iguanas, sloths, and a wide variety of birds.",
+  "longDescription": "Located near the Costa Rica–Nicaragua border, the Caño Negro Wildlife Refuge is a protected RAMSAR wetland and an essential habitat for migratory and endangered species. This full-day adventure begins with a scenic drive through the northern plains to the town of Los Chiles. From there, board a comfortable covered boat and cruise along the Río Frío with a naturalist guide. During the 2-hour safari, it’s common to spot monkeys, caimans, herons, iguanas, turtles, sloths, and numerous bird species. After the tour, enjoy a traditional Costa Rican lunch before returning to La Fortuna.",
+  "highlights": [
+    "Boat safari along Río Frío near Caño Negro Wildlife Refuge",
+    "Frequent sightings of monkeys, caimans, iguanas, birds, and more",
+    "Certified naturalist guide",
+    "Traditional Costa Rican lunch included",
+    "Small groups for personalized service",
+    "Ideal for families and wildlife enthusiasts"
+  ],
+  "photos": [
+
+    "assets/img/tours/cano-negro/2.jpg",
+    "assets/img/tours/cano-negro/3.jpg",
+    "assets/img/tours/cano-negro/4.jpg",
+    "assets/img/tours/cano-negro/5.jpg",
+    "assets/img/tours/cano-negro/6.jpg"
+
+
+  ],
+  "schedule": [
+    "07:30 AM - Departure from La Fortuna",
+    "03:30 PM - Approximate return"
+  ],
+  "whatToBring": [
+    "Comfortable clothes and shoes",
+    "Hat and sunglasses",
+    "Sunscreen and insect repellent",
+    "Passport",
+    "Camera and binoculars",
+    "Extra money for snacks or tips"
+  ],
+  "includes": "Transportation with A/C and Wi-Fi, bilingual naturalist guide, bottled water, snacks, traditional lunch, insurance"
+},
+
+{
+  "id": 7,
+  "name": "Cloud Forest Hike – Juan Castro Blanco National Park",
+  "image": "assets/img/tours/juan-castro/1.jpg",
+  "duration": "7 hours",
+  "price": "$122",
+  "difficulty": "Moderate",
+  "description": "Explore the misty cloud forests of Juan Castro Blanco National Park, known as Costa Rica’s 'National Park of Water'. A scenic high-altitude hike with incredible views, unique wildlife, and a traditional lunch.",
+  "longDescription": "Just 1.5 hours from La Fortuna lies Juan Castro Blanco National Park, a protected high-altitude cloud forest and one of Costa Rica’s most important freshwater sources. At over 2,000 meters (6,560 ft), this area is home to lush vegetation, cool temperatures, and exceptional birdlife — including the Resplendent Quetzal during peak months. The hike covers 3 km of cloud-forest trails, offering sweeping views of the San Carlos plains while learning about the park’s unique ecosystems. After the hike, enjoy a traditional Costa Rican lunch before returning to La Fortuna.",
+  "highlights": [
+    "3 km cloud-forest hike at 2,000+ meters elevation",
+    "Known as Costa Rica’s 'National Park of Water'",
+    "Scenic views over the San Carlos plains",
+    "Opportunity to spot high-altitude birds, including the Quetzal",
+    "Traditional Costa Rican lunch",
+    "Small groups and professional naturalist guide"
+  ],
+  "photos": [
+    "assets/img/tours/juan-castro/2.jpg",
+    "assets/img/tours/juan-castro/3.jpg",
+    "assets/img/tours/juan-castro/4.jpg",
+    "assets/img/tours/juan-castro/5.jpg",
+    "assets/img/tours/juan-castro/6.jpg"
+  ],
+  "schedule": [
+    "07:30 AM – Departure from La Fortuna",
+    "02:30 PM – Approximate return"
+  ],
+  "whatToBring": [
+    "Hiking or tennis shoes",
+    "Comfortable clothing",
+    "Poncho or rain jacket",
+    "Insect repellent",
+    "Extra money for snacks or tips"
+  ],
+  "includes": "Transportation with A/C and Wi-Fi, bilingual naturalist guide, National Park entrance, bottled water, snacks, lunch, walking sticks, insurance"
+}
+
   ]
 }

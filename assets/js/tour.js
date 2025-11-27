@@ -142,6 +142,33 @@
       }
     }
 
+    // ===== OPTIONS (para combos / tours con variantes de precio) =====
+    const optionsSection = $('tourOptionsSection');
+    const optionsContainer = $('tourOptions');
+
+    if (optionsSection && optionsContainer && tour.options && typeof tour.options === 'object') {
+      const entries = Object.entries(tour.options).filter(([label, price]) => label && price);
+      if (entries.length) {
+        optionsSection.hidden = false;
+
+        optionsContainer.innerHTML = entries.map(([label, price]) => {
+          // Resalta si parece un combo grande (3 in 1 / 4 in 1 / Hot Springs)
+          const highlight =
+            /3 in 1/i.test(label) ||
+            /4 in 1/i.test(label) ||
+            /Hot Springs/i.test(label)
+              ? ' tour-option--highlight'
+              : '';
+          return `
+            <article class="tour-option${highlight}">
+              <h3 class="tour-option__title">${label}</h3>
+              <div class="tour-option__price">${price}</div>
+            </article>`;
+        }).join('');
+      }
+    }
+
+
     // CTA (pasa el nombre del tour al formulario de contacto)
     const cta = $('ctaBook');
     if (cta) {
