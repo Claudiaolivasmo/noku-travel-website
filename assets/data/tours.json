@@ -4,7 +4,7 @@
     {
   "id": 1,
   "name": "Combo Tour: Top 4 Activities in 1 Day",
-  "image": "assets/img/tours/combo-4in1/1.jpg",
+  "image": "assets/img/tours/combo-4in1/1.JPG",
   "duration": "10.5–14 hours",
   "price": "From $203",
   "difficulty": "Moderate",
@@ -20,14 +20,14 @@
     "Small groups and dedicated guide"
   ],
   "photos": [
-    "assets/img/tours/combo-4in1/2.jpg",
-    "assets/img/tours/combo-4in1/3.jpg",
-    "assets/img/tours/combo-4in1/4.jpg",
-    "assets/img/tours/combo-4in1/5.jpg",
-    "assets/img/tours/combo-4in1/6.jpg",
-    "assets/img/tours/combo-4in1/8.jpg",
-    "assets/img/tours/combo-4in1/9.jpg",
-    "assets/img/tours/combo-4in1/10.jpg"
+    "assets/img/tours/combo-4in1/2.JPG",
+    "assets/img/tours/combo-4in1/3.JPG",
+    "assets/img/tours/combo-4in1/4.JPG",
+    "assets/img/tours/combo-4in1/5.JPG",
+    "assets/img/tours/combo-4in1/6.JPG",
+    "assets/img/tours/combo-4in1/8.JPG",
+    "assets/img/tours/combo-4in1/9.JPG",
+    "assets/img/tours/combo-4in1/10.JPG"
   ],
   "schedule": [
     "07:30 AM – Departure",
@@ -150,7 +150,7 @@
     "assets/img/tours/waterfall-hike/2.jpg",
     "assets/img/tours/waterfall-hike/3.jpg",
     "assets/img/tours/waterfall-hike/4.jpg",
-    "assets/img/tours/waterfall-hike/5.jpg"
+    "assets/img/tours/waterfall-hike/5.JPG"
   ],
   "schedule": [
     "08:00 AM – Morning tour",
@@ -190,7 +190,7 @@
       "assets/img/tours/arenal-lake/2.jpg",
       "assets/img/tours/arenal-lake/3.jpg",
       "assets/img/tours/arenal-lake/4.jpg",
-      "assets/img/tours/arenal-lake/5.jpg"
+      "assets/img/tours/arenal-lake/5.JPG"
     ],
     "schedule": [
       "08:00 AM – Morning departure",
@@ -207,7 +207,7 @@
   {
   "id": 6,
   "name": "Caño Negro & Río Frío Wildlife Boat Safari",
-  "image": "assets/img/tours/cano-negro/1.jpg",
+  "image": "assets/img/tours/cano-negro/1.JPG",
   "duration": "8 hours",
   "price": "$89",
   "difficulty": "Easy",
@@ -223,12 +223,11 @@
   ],
   "photos": [
 
-    "assets/img/tours/cano-negro/2.jpg",
-    "assets/img/tours/cano-negro/3.jpg",
-    "assets/img/tours/cano-negro/4.jpg",
-    "assets/img/tours/cano-negro/5.jpg",
-    "assets/img/tours/cano-negro/6.jpg"
-
+    "assets/img/tours/cano-negro/2.JPG",
+    "assets/img/tours/cano-negro/3.JPG",
+    "assets/img/tours/cano-negro/4.JPG",
+    "assets/img/tours/cano-negro/5.JPG",
+    "assets/img/tours/cano-negro/6.JPG"
 
   ],
   "schedule": [
@@ -264,9 +263,9 @@
     "Small groups and professional naturalist guide"
   ],
   "photos": [
-    "assets/img/tours/juan-castro/2.jpg",
+    "assets/img/tours/juan-castro/2.JPG",
     "assets/img/tours/juan-castro/3.jpg",
-    "assets/img/tours/juan-castro/4.jpg",
+    "assets/img/tours/juan-castro/4.JPG",
     "assets/img/tours/juan-castro/5.jpg",
     "assets/img/tours/juan-castro/6.jpg"
   ],
