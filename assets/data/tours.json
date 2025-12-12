@@ -109,10 +109,14 @@
     "On-site restaurant and bar"
   ],
   "photos": [
+    "assets/img/tours/ecotermales/1.jpg",
     "assets/img/tours/ecotermales/2.jpg",
     "assets/img/tours/ecotermales/3.jpg",
     "assets/img/tours/ecotermales/4.jpg",
-    "assets/img/tours/ecotermales/5.jpeg"
+    "assets/img/tours/ecotermales/5.jpeg",
+    "assets/img/tours/ecotermales/6.jpg",
+    "assets/img/tours/ecotermales/7.jpg"
+
   ],
   "schedule": [
     "10:00 AM – 4:00 PM Day Pass",
@@ -120,7 +124,6 @@
   ],
   "whatToBring": [
     "Swimsuit",
-    "Towel (or rental available)",
     "Sandals or water shoes",
     "Extra clothes",
     "Money for drinks, meals, or lockers"
