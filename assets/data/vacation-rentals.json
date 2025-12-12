@@ -1,0 +1,84 @@
+[
+  {
+    "id": "cabin-forest-1",
+    "slug": "forest-cabin-la-fortuna",
+    "name": "Forest Cabin",
+    "short_description": "Private reforested-cabin with trails, hot tub and excellent birdwatching.",
+    "description": "Private cabin on a reforested property. Walking trails, birdwatching, a heated hot tub, and easy access to La Fortuna's main attractions. Comfortable common area, equipped kitchen and peaceful garden spaces for yoga or relaxing.",
+    "image": "assets/img/rentals/forest-cabin/1.jpg",
+    "gallery": [
+        "assets/img/rentals/forest-cabin/1.jpg",
+        "assets/img/rentals/forest-cabin/2.jpg",
+        "assets/img/rentals/forest-cabin/3.jpg",
+        "assets/img/rentals/forest-cabin/4.jpg",
+        "assets/img/rentals/forest-cabin/5.jpg",
+        "assets/img/rentals/forest-cabin/6.jpg"
+        ],
+
+    "min_nights": 2,
+    "instant_book": false,
+    "book_url": "https://www.airbnb.co.cr/rooms/1572548489608089189"
+,
+    "max_guests": 6,
+    "capacity": 6,
+    "beds": 2,
+    "amenities": [
+      "Hot tub",
+      "Kitchen",
+      "Trails",
+      "Limited Wi-Fi",
+      "Free parking"
+    ],
+    "tags": [
+      "birding",
+      "family-friendly",
+      "wellness"
+    ],
+    "rating": 4.8,
+    "reviews_count": 124,
+    "availability": true,
+    "location": {
+      "area": "La Fortuna",
+      "country": "Costa Rica"
+    }
+  },
+{
+    "id": "cabin-offgrid-1",
+    "slug": "cozy-studio-la-fortuna",
+    "name": "Cozy Studio",
+    "short_description": "Small off-grid cabin for a true nature escape — cold plunge and private trail.",
+    "description": "Off-grid cabin perfect for disconnection: cold plunge tub, solar power, and a 1 km private trail for observing frogs, toucans and other wildlife. Cozy interior, simple kitchen and ideal for couples or solo travelers seeking quiet.",
+    "image": "assets/img/rentals/cozy-studio/1.jpg",
+    "gallery": [
+      "assets/img/rentals/cozy-studio/1.jpg",
+      "assets/img/rentals/cozy-studio/2.jpg",
+      "assets/img/rentals/cozy-studio/3.jpg",
+      "assets/img/rentals/cozy-studio/4.jpg",
+      "assets/img/rentals/cozy-studio/5.jpg",
+      "assets/img/rentals/cozy-studio/6.jpg"
+    ],
+    "min_nights": 2,
+    "instant_book": true,
+    "book_url": "https://www.airbnb.co.cr/rooms/1572812911883425684",
+    "max_guests": 4,
+    "capacity": 4,
+    "beds": 1,
+    "amenities": [
+      "Off-grid",
+      "Private trail",
+      "Garden views"
+    ],
+    "tags": [
+      "off-grid",
+      "couples",
+      "nature"
+    ],
+    "rating": 4.6,
+    "reviews_count": 58,
+    "availability": true,
+    "location": {
+      "area": "La Fortuna",
+      "country": "Costa Rica"
+    }
+  }
+]

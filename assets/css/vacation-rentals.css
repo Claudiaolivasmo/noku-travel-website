@@ -1,0 +1,106 @@
+/* vacation-rentals.css
+   Full-width variant — no dependencias de .container
+   Uses variables from styles.css
+*/
+
+/* spacing tokens for page */
+:root {
+  --page-pad-inline: 1rem;
+  --page-pad-inline-lg: 2.25rem;
+}
+
+/* general sections and content width helper */
+.content-width { max-width:1100px; margin-inline:auto; padding-inline:var(--page-pad-inline); }
+.section { padding-block: calc(var(--sp-8) + .5rem); padding-inline: var(--page-pad-inline); box-sizing:border-box; }
+@media (min-width:1100px){ .section { padding-inline: var(--page-pad-inline-lg); } }
+.section--light { background: var(--accent-cream); }
+
+/* HERO */
+.hero--rentals {
+  position:relative; width:100%; min-height:56vh; max-height:760px;
+  display:flex; align-items:center; overflow:hidden; margin-top:64px;
+  border-bottom-left-radius:12px; border-bottom-right-radius:12px;
+}
+.hero--rentals .page-hero__img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform:scale(1.03); transition:transform .9s ease; z-index:1; }
+.hero--rentals:hover .page-hero__img { transform:scale(1.07); }
+.hero--rentals .page-hero__overlay { position:absolute; inset:0; z-index:2; background: linear-gradient(180deg, rgba(6,8,6,.22) 10%, rgba(6,8,6,.62) 75%); }
+.hero--rentals .page-hero__content { position:relative; z-index:3; width:100%; padding-block:2.25rem; padding-inline:var(--page-pad-inline); }
+
+/* hero text */
+.hero__kicker { display:inline-block; font-weight:700; background:rgba(0,0,0,.2); padding:.3rem .7rem; border-radius:999px; margin-bottom:.6rem; color:var(--accent-sand); }
+.hero__title { font-size:clamp(1.6rem,4.5vw,2.8rem); font-weight:900; color:var(--white); text-shadow:0 8px 28px rgba(0,0,0,.45); margin:0.15rem 0 .6rem; }
+.hero__lead { color:rgba(255,255,255,.95); font-size:clamp(.98rem,1.6vw,1.15rem); max-width:70ch; margin-bottom:1rem; }
+.hero__ctas { display:flex; gap:.75rem; align-items:center; margin-top:.6rem; flex-wrap:wrap; }
+.hero__meta { margin-top:.9rem; display:flex; gap:.55rem; align-items:center; flex-wrap:wrap; }
+
+/* badges */
+.badge { font-size:.8rem; padding:.35rem .6rem; border-radius:.6rem; background:var(--gray-200); color:var(--gray-700); font-weight:600; }
+.badge--brand { background:var(--noku-light); color:var(--noku-primary); font-weight:800; }
+
+/* FILTER BAR */
+.filter-bar { width:100%; padding-block:.55rem; padding-inline:var(--page-pad-inline); box-sizing:border-box; }
+.filter-bar--sticky { position:sticky; top:68px; z-index:48; background: linear-gradient(180deg, rgba(255,255,255,.995), rgba(255,255,255,.98)); box-shadow:0 6px 18px rgba(12,12,12,.04); border-bottom-left-radius:10px; border-bottom-right-radius:10px; }
+.filter-inner { display:flex; gap:.75rem; align-items:center; justify-content:space-between; flex-wrap:wrap; width:100%; max-width:1300px; margin-inline:auto; }
+.filter-item { display:flex; gap:.6rem; align-items:center; flex:1 1 220px; min-width:140px; }
+.filter-item input, .filter-item select { width:100%; padding:.62rem .8rem; border-radius:.65rem; border:1px solid var(--gray-300); background:var(--white); box-shadow:var(--shadow-1) inset; }
+.filter-actions { display:flex; gap:.5rem; align-items:center; }
+
+/* Rentals grid */
+/* Rentals grid — centrado y responsivo */
+#rentals-grid {
+  display: grid;
+  gap: 1rem;
+  /* usa auto-fit para que las columnas se ajusten automáticamente */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* centra la rejilla si no ocupa todo el ancho */
+  justify-content: center;
+  /* evita que la rejilla sea demasiado ancha en pantallas grandes */
+  width: 100%;
+  padding-inline: var(--page-pad-inline);
+  box-sizing: border-box;
+  margin-inline: auto;
+  max-width: 1200px; /* ajusta a tu preferencia (1200-1400) */
+}
+
+/* Asegurar que cada card ocupe todo el ancho de su celda */
+#rentals-grid .card {
+  width: 100%;
+}
+
+/* Responsive adjustments: 
+   En pantallas medianas y pequeñas reducimos min width para que quepan más columnas */
+@media (max-width:1100px){
+  #rentals-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); padding-inline: 1rem; }
+}
+@media (max-width:700px){
+  #rentals-grid { grid-template-columns: 1fr; padding-inline: .75rem; }
+}
+
+/* Cards */
+.card { border-radius:.9rem; overflow:hidden; background:var(--white); border:1px solid var(--gray-200); box-shadow:var(--shadow-1); display:flex; flex-direction:column; min-height:220px; transition:transform .18s ease,box-shadow .18s ease; }
+.card:hover { transform:translateY(-4px); box-shadow:var(--shadow-2); }
+.card__media { position:relative; aspect-ratio:4/3; overflow:hidden; background:var(--gray-200); }
+.card__media img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s cubic-bezier(.2,.9,.2,1); }
+.card:hover .card__media img { transform:scale(1.04); }
+.card__badge { position:absolute; top:.7rem; right:.7rem; background:linear-gradient(90deg, rgba(255,255,255,.96), rgba(255,255,255,.88)); color:var(--noku-primary); padding:.35rem .6rem; border-radius:.8rem; font-weight:800; box-shadow:0 6px 20px rgba(0,0,0,.12); }
+.card__pad { padding:.9rem; display:flex; flex-direction:column; gap:.5rem; flex:1; }
+.card__title { font-size:1.05rem; font-weight:800; color:var(--gray-900); }
+.card__text { color:var(--gray-600); margin-bottom:.4rem; }
+.card__meta { margin-top:auto; display:flex; gap:.5rem; align-items:center; }
+.card__cta .btn { width:auto; min-width:140px; }
+@media (max-width:700px){ .card__cta .btn { width:100%; } }
+
+/* Modal */
+.modal { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; z-index:1002; padding:1.5rem; background:rgba(6,7,6,.45); }
+.modal[hidden] { display:none; }
+.modal__dialog { width:100%; max-width:1000px; background:var(--white); border-radius:.9rem; box-shadow:var(--shadow-3); overflow:hidden; }
+.modal__header { display:flex; align-items:center; justify-content:space-between; padding:1rem 1.25rem; border-bottom:1px solid var(--gray-200); }
+.modal__body { padding:1rem 1.25rem; max-height:72vh; overflow:auto; }
+.modal__gallery { display:grid; grid-template-columns:1fr 140px; gap:.6rem; align-items:start; }
+.modal__gallery img { width:100%; height:100%; object-fit:cover; border-radius:.5rem; }
+@media (max-width:900px){ .modal__gallery { grid-template-columns:1fr; } }
+
+/* accessibility */
+a:focus, button:focus, input:focus, select:focus { outline:3px solid rgba(160,123,90,.22); outline-offset:3px; border-radius:.3rem; }
+.hero__kicker, .hero__meta .badge { font-size:.85rem; }
+

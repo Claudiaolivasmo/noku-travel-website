@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Nóku Travel — Vacation Rentals in La Fortuna, Costa Rica</title>
+  <meta name="description" content="Discover peaceful cabins and wellness-focused vacation rentals in La Fortuna, Costa Rica. Surrounded by tropical forest, gardens, and river access — the perfect place to relax and reconnect." />
+  <meta name="keywords" content="La Fortuna vacation rentals, cabins in Costa Rica, Arenal lodging, wellness stays, tropical forest cabins, eco-friendly rentals, yoga retreats, nature stays" />
+  <link rel="canonical" href="vacation-rentals.html" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Nóku Travel — Vacation Rentals in La Fortuna, Costa Rica" />
+  <meta property="og:description" content="Stay in peaceful cabins surrounded by tropical forest, gardens, and river trails in La Fortuna." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="vacation-rentals.html" />
+  <meta property="og:image" content="assets/img/og-vacation-rentals.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nóku Travel — La Fortuna Vacation Rentals" />
+  <meta name="twitter:description" content="Wellness-focused accommodations in the tropical forest of Costa Rica." />
+  <meta name="twitter:image" content="assets/img/og-vacation-rentals.jpg" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/vacation-rentals.css" />
+</head>
+
+<body>
+
+<!-- NAV: copy this into every page (same markup everywhere) -->
+<nav class="nav" id="site-nav" aria-label="Main menu">
+  <div class="container nav__inner">
+    <!-- Brand -->
+    <a href="index.html#home" class="brand" aria-label="Nóku Travel — Home">
+      <img src="assets/img/noku-logo.png" alt="Nóku Travel logo" class="brand__logo">
+      <span class="brand__name">Nóku Travel</span>
+    </a>
+
+    <!-- Hamburger button (visible on mobile, controlled by nav.js) -->
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-expanded="false"
+      aria-controls="navMobile"
+      aria-label="Open main menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Desktop links -->
+    <div class="nav__links" role="menubar">
+      <a href="index.html#home" class="nav__link" role="menuitem">Home</a>
+      <a href="tours.html" class="nav__link" role="menuitem">Tours</a>
+      <a href="vacation-rentals.html" class="nav__link" role="menuitem">Vacation Rentals</a>
+      <a href="about.html" class="nav__link" role="menuitem">About</a>
+      <a href="contact.html" class="nav__link" role="menuitem">Contact</a>
+      <a href="https://wa.me/50685675060" class="nav__link btn-whatsapp-mobile" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile overlay menu (same on every page) -->
+<nav class="nav-mobile" id="navMobile" aria-label="Mobile menu" aria-hidden="true" hidden>
+  <div class="mobile-logo">
+    <img src="assets/img/noku-logo.png" alt="Nóku Travel logo" width="120" height="40" loading="lazy">
+  </div>
+  <ul>
+    <li><a href="index.html#home" data-close>Home</a></li>
+    <li><a href="tours.html" data-close>Tours</a></li>
+    <li><a href="vacation-rentals.html" data-close>Vacation Rentals</a></li>
+    <li><a href="about.html" data-close>About</a></li>
+    <li><a href="contact.html" data-close>Contact</a></li>
+  </ul>
+</nav>
+
+
+  <!-- HERO (full width) -->
+  <header class="page-hero hero--rentals" role="banner">
+    <img src="assets/img/rentals/la-fortuna-hero.jpg" alt="" class="page-hero__img" aria-hidden="true">
+    <div class="page-hero__overlay" aria-hidden="true"></div>
+
+    <div class="page-hero__content">
+      <div class="content-width">
+        <div class="hero__kicker">La Fortuna — Private Forest Cabins</div>
+        <h1 class="hero__title">Reconnect with Nature in our Reforested Sanctuary</h1>
+        <p class="hero__lead">Two private off-grid cabins on a 3.71 acres reforested property with trails, river access and unique birdwatching opportunities.</p>
+
+        <div class="hero__ctas">
+          <a href="#rentals-grid" class="btn btn--primary btn--large">See Available Cabins</a>
+          <a 
+            href="https://wa.me/50685675060" 
+            target="_blank" 
+            rel="noopener" 
+            class="btn btn--secondary btn--large">
+            Ask for Discounts
+            </a>
+
+        </div>
+
+        <div class="hero__meta">
+          <span class="badge">Trails • River • Birdwatching</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN (full-width sections, content inside .content-width when needed) -->
+  <main id="main-content" class="section" role="main">
+
+    <!-- Property highlight (no outer container) -->
+    <section class="section section--light fade-section visible" aria-labelledby="property-title">
+      <div class="content-width">
+        <header class="section__header">
+          <h2 class="h2" id="property-title">The Property &amp; The Forest</h2>
+          <p class="lead">A reforested, family-run property with a large garden, 1 km of trails and a small river — perfect for yoga, birding and quiet getaways.</p>
+        </header>
+
+        <div class="custom__grid grid--2">
+          <div>
+            <p class="text">We planted native trees and created trails that let you gently explore the forest. Guests frequently spot manakins, trogons, toucans and other colorful birds. The gardens are spacious — perfect for outdoor breakfasts, hammock time or a small ceremony.</p>
+
+            <ul class="list">
+              <li>Private trails & easy walking loop</li>
+              <li>River access for relaxation and birding</li>
+              <li>Garden spaces for yoga & small groups</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- RENTALS GRID (JS populates cards directly here) -->
+    <section id="rentals-grid" class="grid mt-6" aria-live="polite" aria-busy="false" role="list"></section>
+
+    <!-- Modal (details) -->
+    <div id="modal" class="modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal__dialog" role="document">
+        <header class="modal__header">
+          <h3 id="modal-title" class="h3"></h3>
+          <button id="modal-close" class="btn" aria-label="Close dialog"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        </header>
+        <div id="modal-body" class="modal__body"></div>
+      </div>
+    </div>
+
+  </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="brand brand--footer">Nóku Travel</div>
+        <p class="muted">
+          Authentic, wellness first adventures born from the heart of La Fortuna, Costa Rica.
+        </p>
+
+        <div class="footer__contact-info">
+          <a href="mailto:nokutravelcr@gmail.com" class="footer__link" aria-label="Send an email">
+            <i class="fas fa-envelope"></i> nokutravelcr@gmail.com
+          </a>
+          <span class="footer__link">
+            <i class="fas fa-map-marker-alt"></i> La Fortuna, San Carlos, Costa Rica
+          </span>
+        </div>
+
+        <div class="socials">
+          <a href="https://www.instagram.com/nokutravelcr" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/50685675060" target="_blank" rel="noopener" aria-label="Contact us via WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+
+        <p class="tiny">© 2025 Nóku Travel. All rights reserved. | Pura Vida 🇨🇷</p>
+      </div>
+    </footer>
+
+
+  <script src="assets/js/vacation-rentals.js" defer></script>
+</body>
+</html>

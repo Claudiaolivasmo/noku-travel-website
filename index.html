@@ -37,8 +37,8 @@
   <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
 
 
-<!-- NAV (header fijo con hamburguesa) -->
-<nav class="nav" id="header" role="navigation" aria-label="Main menu">
+<!-- NAV: copy this into every page (same markup everywhere) -->
+<nav class="nav" id="site-nav" aria-label="Main menu">
   <div class="container nav__inner">
     <!-- Brand -->
     <a href="index.html#home" class="brand" aria-label="Nóku Travel — Home">
@@ -46,50 +46,39 @@
       <span class="brand__name">Nóku Travel</span>
     </a>
 
-    <!-- Botón hamburguesa (solo móvil) -->
+    <!-- Hamburger button (visible on mobile, controlled by nav.js) -->
     <button
       class="hamburger"
       id="hamburger"
       aria-expanded="false"
       aria-controls="navMobile"
       aria-label="Open main menu">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
 
-    <!-- Links desktop -->
+    <!-- Desktop links -->
     <div class="nav__links" role="menubar">
       <a href="index.html#home" class="nav__link" role="menuitem">Home</a>
-      <a href="tours.html" class="nav__link" role="menuitem">All Tours</a>
+      <a href="tours.html" class="nav__link" role="menuitem">Tours</a>
+      <a href="vacation-rentals.html" class="nav__link" role="menuitem">Vacation Rentals</a>
       <a href="about.html" class="nav__link" role="menuitem">About</a>
       <a href="contact.html" class="nav__link" role="menuitem">Contact</a>
-      <a
-        href="https://wa.me/50685675060"
-        target="_blank"
-        rel="noopener"
-        class="nav__link btn-whatsapp-mobile"
-        aria-label="Contact us via WhatsApp">
-        <i class="fab fa-whatsapp"></i> WhatsApp
+      <a href="https://wa.me/50685675060" class="nav__link btn-whatsapp-mobile" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
       </a>
     </div>
   </div>
 </nav>
 
-<!-- Menú móvil tipo overlay (como Natura) -->
+<!-- Mobile overlay menu (same on every page) -->
 <nav class="nav-mobile" id="navMobile" aria-label="Mobile menu" aria-hidden="true" hidden>
   <div class="mobile-logo">
-    <img
-      src="assets/img/noku-logo.png"
-      alt="Nokú Travel logo"
-      width="120"
-      height="40"
-      loading="lazy">
+    <img src="assets/img/noku-logo.png" alt="Nóku Travel logo" width="120" height="40" loading="lazy">
   </div>
-
   <ul>
     <li><a href="index.html#home" data-close>Home</a></li>
-    <li><a href="tours.html" data-close>All Tours</a></li>
+    <li><a href="tours.html" data-close>Tours</a></li>
+    <li><a href="vacation-rentals.html" data-close>Vacation Rentals</a></li>
     <li><a href="about.html" data-close>About</a></li>
     <li><a href="contact.html" data-close>Contact</a></li>
   </ul>

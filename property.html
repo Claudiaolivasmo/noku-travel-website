@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Nóku Travel — Property Details</title>
+  <meta name="description" content="Property details, gallery and booking for Nóku Travel vacation rentals in La Fortuna, Costa Rica." />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <!-- Social / SEO -->
+  <meta property="og:title" content="Nóku Travel — Property Details" />
+  <meta property="og:description" content="Explore this vacation rental in La Fortuna: gallery, amenities and booking." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og-property.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts & icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Global & page styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/property.css" />
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+
+
+  <!-- NAV: copy this into every page (same markup everywhere) -->
+<nav class="nav" id="site-nav" aria-label="Main menu">
+  <div class="container nav__inner">
+    <!-- Brand -->
+    <a href="index.html#home" class="brand" aria-label="Nóku Travel — Home">
+      <img src="assets/img/noku-logo.png" alt="Nóku Travel logo" class="brand__logo">
+      <span class="brand__name">Nóku Travel</span>
+    </a>
+
+    <!-- Hamburger button (visible on mobile, controlled by nav.js) -->
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-expanded="false"
+      aria-controls="navMobile"
+      aria-label="Open main menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Desktop links -->
+    <div class="nav__links" role="menubar">
+      <a href="index.html#home" class="nav__link" role="menuitem">Home</a>
+      <a href="tours.html" class="nav__link" role="menuitem">Tours</a>
+      <a href="vacation-rentals.html" class="nav__link" role="menuitem">Vacation Rentals</a>
+      <a href="about.html" class="nav__link" role="menuitem">About</a>
+      <a href="contact.html" class="nav__link" role="menuitem">Contact</a>
+      <a href="https://wa.me/50685675060" class="nav__link btn-whatsapp-mobile" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile overlay menu (same on every page) -->
+<nav class="nav-mobile" id="navMobile" aria-label="Mobile menu" aria-hidden="true" hidden>
+  <div class="mobile-logo">
+    <img src="assets/img/noku-logo.png" alt="Nóku Travel logo" width="120" height="40" loading="lazy">
+  </div>
+  <ul>
+    <li><a href="index.html#home" data-close>Home</a></li>
+    <li><a href="tours.html" data-close>Tours</a></li>
+    <li><a href="vacation-rentals.html" data-close>Vacation Rentals</a></li>
+    <li><a href="about.html" data-close>About</a></li>
+    <li><a href="contact.html" data-close>Contact</a></li>
+  </ul>
+</nav>
+
+
+  <main id="main-content" style="padding-top:72px;">
+    <div class="container" id="property-content" aria-live="polite">
+      <!-- El JS rellenará TODO el contenido de la propiedad aquí -->
+      <p class="muted">Loading property…</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="brand--footer">Nóku Travel</div>
+      <p class="muted">Authentic, wellness-minded stays in La Fortuna — Pura Vida.</p>
+      <div class="footer__contact-info">
+        <a href="mailto:nokutravelcr@gmail.com" class="footer__link"><i class="fas fa-envelope"></i> nokutravelcr@gmail.com</a>
+        <span class="footer__link"><i class="fas fa-map-marker-alt"></i> La Fortuna, Costa Rica</span>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/50685675060" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p class="tiny">© 2025 Nóku Travel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- property.js coloca la información dentro de #property-content -->
+  <script src="assets/js/property.js" defer></script>
+  <!-- nav.js maneja el comportamiento del menú hamburguesa si existe -->
+  <script src="assets/js/nav.js" defer></script>
+</body>
+</html>
