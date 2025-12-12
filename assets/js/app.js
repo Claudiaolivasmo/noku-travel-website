@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* Builds one tour card matching our CSS */
-/* Builds one tour card matching our CSS */
 function renderTourCard(tour) {
   const {
     name,
@@ -55,7 +54,7 @@ function renderTourCard(tour) {
     duration,
     price,
     difficulty,
-    highlights = [],
+    highlights = [], // Mantenemos la desestructuración por si acaso
     badge
   } = tour || {};
 
@@ -87,20 +86,14 @@ function renderTourCard(tour) {
   // meta chips
   const meta = el('div', 'card__meta');
   if (difficulty) meta.appendChild(el('span', 'badge badge--soft', textOr(difficulty)));
-  if (duration)   meta.appendChild(el('span', 'badge', `⏱ ${textOr(duration)}`));
+  if (duration) meta.appendChild(el('span', 'badge', `⏱ ${textOr(duration)}`));
   body.appendChild(meta);
 
-  // highlights (máx 3)
-  if (Array.isArray(highlights) && highlights.length) {
-    const list = el('ul', 'list');
-    highlights.slice(0, 3).forEach(h => list.appendChild(el('li', null, textOr(h))));
-    body.appendChild(list);
-  }
 
   // info table
   const info = el('dl', 'info');
-  if (duration)  info.appendChild(rowDL('Duration:', textOr(duration)));
-  if (price)     info.appendChild(rowDL('Price:', `<span class="price">${textOr(price)}</span>`));
+  if (duration) info.appendChild(rowDL('Duration:', textOr(duration)));
+  if (price) info.appendChild(rowDL('Price:', `<span class="price">${textOr(price)}</span>`));
   if (info.children.length) body.appendChild(info);
 
   // CTA -> link al detalle
@@ -111,11 +104,12 @@ function renderTourCard(tour) {
   cta.appendChild(link);
   body.appendChild(cta);
 
-
-  // ⬇️ Estas dos líneas y el cierre faltaban
   card.appendChild(body);
   return card;
 }
+
+
+
 
 
 /* ========== TOURS ========== */
@@ -137,15 +131,34 @@ async function loadTours() {
       tourSelect.appendChild(ph);
     }
 
-    tours.forEach(t => {
+    // --- Nuevo: elegir hasta 3 tours destacados ---
+    // Primero, tomar tours con "featured: true"
+    const featured = tours.filter(t => t && t.featured === true).slice(0, 3);
+
+    // Si hay menos de 3 featured, completar con otros tours sin repetir
+    let displayTours = featured.slice(); // copia
+    if (displayTours.length < 3) {
+      const needed = 3 - displayTours.length;
+      const rest = tours.filter(t => !displayTours.includes(t)).slice(0, needed);
+      displayTours = displayTours.concat(rest);
+    }
+    // ------------------------------------------------
+
+    // Renderizar únicamente los tours seleccionados para la vista previa
+    displayTours.forEach(t => {
       container.appendChild(renderTourCard(t));
-      if (tourSelect && t?.name) {
-        const opt = document.createElement('option');
-        opt.value = t.name; opt.textContent = t.name;
-        tourSelect.appendChild(opt);
-      }
     });
 
+    // Pero mantener el select con TODOS los tours (opcional, mantiene el formulario útil)
+    if (tourSelect) {
+      tours.forEach(t => {
+        if (t?.name) {
+          const opt = document.createElement('option');
+          opt.value = t.name; opt.textContent = t.name;
+          tourSelect.appendChild(opt);
+        }
+      });
+    }
 
   } catch (err) {
     console.error('Error loading tours:', err);

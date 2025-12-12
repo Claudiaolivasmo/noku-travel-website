@@ -91,8 +91,46 @@
     ],
     "includes": "Transportation with A/C and Wi-Fi, bilingual naturalist guide, entrance fee, professional observation equipment, bottled water, snacks, insurance"
   },
-  {
+  
+{
   "id": 3,
+  "name": "Ecotermales Hot Springs Entrance",
+  "image": "assets/img/tours/ecotermales/1.jpg",
+  "duration": "Flexible",
+  "price": "$49",
+  "description": "Relax in the natural volcanic hot springs of Ecotermales, the most intimate and limited-capacity thermal resort in La Fortuna.",
+  "longDescription": "Ecotermales Hot Springs offers one of La Fortuna’s most serene and exclusive thermal experiences. Surrounded by lush rainforest, this family-owned property features several naturally heated mineral pools, each with different temperatures sourced directly from volcanic activity near Arenal. With a strict limit on daily visitors, Ecotermales maintains a peaceful and uncrowded environment—perfect for couples, families, and travelers seeking quiet relaxation. Guests can enjoy thermal pools, waterfalls, walking paths, a cold plunge, and a beautifully designed restaurant and bar area. An ideal experience for unwinding after adventure tours or simply reconnecting with nature.",
+  "highlights": [
+    "Naturally heated volcanic hot springs",
+    "Limited daily capacity for a peaceful atmosphere",
+    "Multiple thermal pools with varying temperatures",
+    "Rainforest surroundings and private ambiance",
+    "Cold plunge and relaxing rest areas",
+    "On-site restaurant and bar"
+  ],
+  "photos": [
+    "assets/img/tours/ecotermales/2.jpg",
+    "assets/img/tours/ecotermales/3.jpg",
+    "assets/img/tours/ecotermales/4.jpg",
+    "assets/img/tours/ecotermales/5.jpeg"
+  ],
+  "schedule": [
+    "10:00 AM – 4:00 PM Day Pass",
+    "5:00 PM – 9:30 PM Night Pass"
+  ],
+  "whatToBring": [
+    "Swimsuit",
+    "Towel (or rental available)",
+    "Sandals or water shoes",
+    "Extra clothes",
+    "Money for drinks, meals, or lockers"
+  ],
+  "includes": "Entrance to all thermal pools, rainforest access paths, rest areas, showers, and changing rooms. Meals and drinks available for purchase."
+},
+
+
+  {
+  "id": 8,
   "name": "Nocturnal Experience & Costa Rican Dinner",
   "image": "assets/img/tours/night-dinner/1.jpg",
   "duration": "4 hours",
@@ -128,6 +166,7 @@
   ],
   "includes": "Transportation with A/C and Wi-Fi, bilingual naturalist guide, sanctuary entrance, lanterns and flashlights, bottled water, traditional dinner, insurance"
 },
+
 
 {
   "id": 4,
